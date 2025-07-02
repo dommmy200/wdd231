@@ -3,33 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD231 Frontend Development 1</title>
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <script src="script.js" defer></script>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="description" content="WDD231 Frontend Development 1 - Dominic Abah's personal webpage. This page serves as an introduction to my work and interests in frontend development.">
     <meta name="keywords" content="WDD231, Frontend Development, Dominic Abah, personal webpage, web development, HTML, CSS, JavaScript">
-    <meta name="author" content="Dominic Abah">
-    <!-- <meta name="robots" content="index, follow">
     <meta property="og:title" content="WDD231 Frontend Development 1">
-    <meta property="og:description" content="Dominic Abah's personal webpage for WDD231 Frontend Development 1.">
-    <meta property="og:image" content="https://example.com/image.jpg">
-    <meta property="og:url" content="https://example.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="WDD231 Frontend Development 1">
-    <meta name="twitter:description" content="Dominic Abah's personal webpage for WDD231 Frontend Development 1.">
-    <meta name="twitter:image" content="https://example.com/image.jpg">
-    <link rel="canonical" href="https://example.com">
-    <link rel="alternate" href="https://example.com" hreflang="en">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <meta name="author" content="Dominic Abah">
+    <title>WDD231 Frontend Development 1</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <script src="script.js" defer></script>
+    <script src="navigation.js" defer></script>
+    <script src="course.js" defer></script>
+    <script src="dates.js" defer></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <header id="header" class="header">
+        <img src="" alt="chamber of commerce logo" class="logo">
+        <span class="my-name">Abah Dominic Odeh</span>
+        <div id="hamburger" class="hamburger"></div>
+    </header>
+    <nav id="nav" class="nav">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#chamber" class="nav-link">Chamber of Commerce</a></li>
+            <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1></h1>
+        <section id="home" class="section">
+            <h2>Welcome to My Personal Webpage</h2>
+            <p>This is a brief introduction to my work and interests in frontend development.</p>
+        </section>
+        <section id="chamber" class="section">
+            <h2>Chamber of Commerce</h2>
+            <p>Information about the Chamber of Commerce and its role in supporting local businesses.</p>
+        </section>
+        <section id="projects" class="section">
+            <h2>My Projects</h2>
+            <p>Here you can find a selection of my projects showcasing my skills in frontend development.</p>
+        </section>
+    </main>
     <div>
         <p id="myIndex">Dominic Abah</p>
     </div>
+    <footer id="footer" class="footer">
+        <p>&copy; 2023 Dominic Abah. All rights reserved.</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+        <p>Contact: <a href="mailto:" id="emailLink">Email Me</a></p>
+        <p>Follow me on <a href="" id="githubLink">GitHub</a> and <a href="" id="linkedinLink">LinkedIn</a>.</p>
+        <p>Check out my <a href="" id="linkedInLink">LinkedIn</a> profile for more information.</p>
+        <p>Visit my <a href="" id="portfolioLink">Portfolio</a> to see more of my work.</p>
+    </footer>
 </body>
 </html>

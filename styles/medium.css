@@ -1,0 +1,34 @@
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+    html,
+    body {
+        /* Prevent accidental scrollbars */
+        overflow-x: hidden;
+        background-color: #cbadad;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        width: 80%;
+        margin: 20px auto;
+        background-color: #7c987a;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-list li {
+        list-style: none;
+        margin: 10px 0;
+    }
+
+    .main {
+        padding: 20px;
+        background-color: #a96868;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+}

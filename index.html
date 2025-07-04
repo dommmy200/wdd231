@@ -18,29 +18,46 @@
     <script src="script.js" defer></script>
     <script src="./scripts/navigation.js" defer></script>
     <script src="course.js" defer></script>
-    <script src="dates.js" defer></script>
+    <script src="./scripts/dates.js" defer></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <header id="header" class="header">
-        <img src="./images/house-chimney.svg" alt="chamber of commerce logo" class="logo" height="512" width="512">
+        <img src="./images/chamber-home-white.svg" alt="chamber of commerce logo" class="logo" height="512" width="512">
         <span class="my-name">Abah Dominic Odeh</span>
         <button id="ham-btn" class="hamburger"></button>
     </header>
     <nav id="nav" class="nav">
-        <ul class="nav-list">
+        <ul class="nav-ulist">
             <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#chamber" class="nav-link">Chamber of Commerce</a></li>
-            <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="#chamber" class="nav-link">Chamber</a></li>
+            <li class="nav-item"><a href="#projects" class="nav-link">Final</a></li>
+            <!-- <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li> -->
         </ul>
     </nav>
     <main class="main">
         <h1 class="home-h1">Home</h1>
         <section id="home" class="section">
-            <h2>Welcome to My Personal Webpage</h2>
-            <p>This is a brief introduction to my work and interests in frontend development.</p>
+            <div class="home-1">
+                <div class="home-11">
+                    <p class="me">About Me</p>
+                    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse repellat expedita necessitatibus a? Commodi perferendis accusantium harum aliquid tempore distinctio fugiat repellendus odio alias voluptatum porro cum esse, quaerat, vero nihil veritatis asperiores enim, dolorem maiores et magni ullam? Aliquam quae eveniet excepturi minus placeat vel reiciendis voluptates qui ipsa?</p>
+                </div>
+                <div class="home-12">
+                    <p class="me">Student Photo</p>
+                    <img src="./images/student-photo.jpg" alt="Student Photo" class="student-photo" width="200" height="200">
+                </div>
+            </div>
+            <div class="home-2">
+                <p class="me">Web Certificate Courses</p>
+                <div class="course-buttons">
+                    <button id="all" class="course-button" onclick="showCourse('WDD231')">All Coursed</button>
+                    <button id="cse" class="course-button" onclick="showCourse('CSE121')">CSE Courses</button>
+                    <button id="wdd" class="course-button" onclick="showCourse('CSE122')">WDD Courses</button>
+                </div>
+                <div id="courses" class="courses"></div>
+            </div>
         </section>
         <section id="chamber" class="section">
             <h2>Chamber of Commerce</h2>
@@ -73,8 +90,8 @@
             </a>
         </div>
         <div>
-            <p>&copy; <span id="currentyear" class="currentyear">202X</span> ● Dominic Abah ● Jos\Nigeria</p>
-            <p>Last Modified: <span id="lastModified" class="lastModified"></span></p>
+            <p><span id="currentYear" class="current-year"></span> <span id="nameCountry" class="name-country"></span></p>
+            <p><span id="lastModified" class="last-modified"></span></p>
         </div>
     </footer>
 </body>

@@ -1,4 +1,4 @@
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) { */
     /*********************************** Color Scheme *******************************/
     * {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -7,36 +7,170 @@
     /********************************* Body Styling ********************************/
     body {
         background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
     }
     /********************************* Header Styling ********************************/
     header {
         display: grid;
         grid-template-columns: 24px auto 44px;
-        /* Changed to a darker blue for better contrast */
-        background-color: #036;
+        background-color: #003366;/* Changed to a darker blue for better contrast */
         color: #f5f5f5;
         padding: 5px 0 5px 10px;
-        border-bottom: solid 1px #ddd;
+        border-bottom: solid 1px #dddddd;
         column-gap: 8px;
     }
-
     .header .logo {
         display: block;
         width: 100%;
         height: auto;
     }
-
     .header .my-name {
         font-size: 1em;
         margin-top: 8px;
         color: #f5f5f5;
-
+    }
+    /********************************* Section Styling ********************************/
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+        padding: 20px;
+        background-color: #f6f6f9;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+    }
+    .home-1 {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 2fr 1fr ;
+        gap: 10px;
+        color: #003366;
+        height: 500px;
+        padding: 20px;
+        background-color: #f5f5f5;
+        box-sizing: border-box;
     }
 
+    .home-11 {
+        grid-column: 1;
+        grid-row: 1;
+        height: 210px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        background-color: #f0f0f0;
+        color: #003366;
+    }
+    .home-12 {
+        grid-column: 1;
+        grid-row: 2;
+        width: 210px;
+        height: 210px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* padding: 10px; */
+        box-sizing: border-box;
+        margin: 0 auto;
+        background-color: #f0f0f0;
+        color: #003366;
+        border: #003366 solid 1px;
+    }
+    .me {
+        display: block;
+        width: 100%;
+        margin: 0;
+        color: #f5f5f5;
+        text-align: center;
+        background-color: #003366;
+    }
+    p .about-me {
+        font-size: 1.2em;
+        line-height: 1.6;
+        color: #f5f5f5;
+        padding: 10px;
+    }
+    .home-12 img {
+        display: block;
+        margin: 25px auto;
+        width: 80%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .home-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        background-color: #f0f0f0;
+        box-sizing: border-box;
+    }
+    .course-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+        width: 100%;
+        text-align: center;
+        background-color: #003366;
+        color: #f5f5f5;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1.2em;
+        text-decoration: none;
+      }
+      .course-button:hover {
+        background-color:#f5f5f5;  /* Lighter shade for hover effect */
+        color: #003366; /* Changed to white for better contrast */
+        border: #003366 solid 1px;
+      }
+
+    /********************************* Main Styling ********************************/
+  .main {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .home-h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #003366;
+  }
+  .main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  /* .about-me {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #003366;
+  } */
     /********************************* Navigation Styling ********************************/
     .nav {
-        display: none;
-        /* Initially hidden */
+        display: none;/* Initially hidden */
     }
 
     .nav.open {
@@ -45,23 +179,18 @@
         align-items: center;
         padding: 0;
         width: 90%;
-        /* min-width: 250px; */
         margin: 20px auto;
-        background-color: #036; /* Changed to a darker blue for better contrast */
-        /* border-radius: 8px; */
+        background-color: #003366; /* Changed to a darker blue for better contrast */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        /* position: fixed; */
     }
-
     .nav-item {
-        margin: 5px 0;
         list-style: none;
         background-color: #f5f5f5;
         margin: 3px auto;
         width: 98%;
     }
     .nav-item:hover {
-        background-color: #036; /* Lighter shade for hover effect */
+        background-color: #003366; /* Lighter shade for hover effect */
         color: #f5f5f5; /* Changed to white for better contrast */
     }
     .nav-ulist {
@@ -72,19 +201,24 @@
     }
     .nav-ulist a {
         font-size: 1em;
-        color: #036; /* Changed to white for better contrast */
+        color: #003366; /* Changed to white for better contrast */
         text-decoration: none;
         padding: 10px;
         border-radius: 4px;
     }
-
+    .nav-link:hover {
+        padding: 0;
+        margin: 0;
+        background-color: #003366;  /*Lighter shade for hover effect */
+        color: #f5f5f5; /* Changed to white for better contrast */
+       }
     /********************************* Hamburger Styling ********************************/
     .hamburger {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        background-color: #036; /* Changed to a darker blue for better contrast */
+        background-color: #003366; /* Changed to a darker blue for better contrast */
         color: #f5f5f5; /* Changed to white for better contrast */
         /* background-color: none; */
         font-size: 2rem;
@@ -109,34 +243,79 @@
         /*display: none;  Initially hidden */
         /*font-size: 2rem;  display: none; */
     }
-
-    
-    
-    /* Button styling */
-    .btn {
-        background-color: #007bff;
-        color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-    }
-    
-    /*  Showing good contrast */
-    
-    .call-to-action {
-        background-color: #f00;
-        color: #fff;
-        font-weight: bold;
-    }
     /********************************* Main Styling ********************************/
-    .main {
+    /* .main {
         padding: 20px;
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         margin: 20px auto;
         width: 90%;
-    }
+    } */
 
-
+    /********************************* Buttons & Course Cards ********************************/
+  .courses {
+    background-color: #f5f5f5;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 4px 4px;
+    border: #003366 solid 1px;
+    box-sizing: border-box;
+    padding: 1px;
+  }
+  
+  .total-credits {
+    background-color:  #003366;
+    color: #f5f5f5;  /*!important */
+    width: 100%;
+    height: 50px;
+    border-radius: 0 0 4px 4px;
+    border: #003366 solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .course-card {
+    display: block;
+    background-color: #003366;
+    color: #f5f5f5;
+    width: 100%;
+    height: 50px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
     /********************************* Footer Styling ********************************/
-}
+  .footer {
+    background-color: #003366;
+    color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+/* } */

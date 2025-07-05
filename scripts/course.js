@@ -113,19 +113,23 @@ function createOutputHTML(courseArray) {
     output.innerHTML = courseCardContainer.outerHTML; // Append all course cards at once
     createAndAppend(totalCredits, output);
 }
-let allBtn = document.querySelectorAll('.course-buttons .course-button');
-allBtn.forEach(btn => {
-    btn.addEventListener('click', () => {
-        
-        if (btn.id === 'all') {
-            let courses = getCourses();
-            createOutputHTML(courses);
-        } else if (btn.id === 'cse') {
-            let courses = getCourses().filter(course => course.subject === 'CSE');
-            createOutputHTML(courses);
-        } else if (btn.id === 'wdd') {
-            let courses = getCourses().filter(course => course.subject === 'WDD');
-            createOutputHTML(courses);
-        }
-    })
-});
+function main() {
+    let allBtn = document.querySelectorAll('.course-buttons .course-button');
+    allBtn.forEach(btn => {
+        btn.addEventListener('click', () => {
+            
+            if (btn.id === 'all') {
+                let courses = getCourses();
+                createOutputHTML(courses);
+            } else if (btn.id === 'cse') {
+                let courses = getCourses().filter(course => course.subject === 'CSE');
+                createOutputHTML(courses);
+            } else if (btn.id === 'wdd') {
+                let courses = getCourses().filter(course => course.subject === 'WDD');
+                createOutputHTML(courses);
+            }
+        })
+    });
+}
+// Initialize the script
+main();

@@ -185,6 +185,33 @@
     color: #036; /* Changed to white for better contrast */
     border: #003366 solid 1px;
   }
+  /********************************* Buttons & Course Cards ********************************/
+  .courses {
+    background-color: #b67070;
+    width: 800px;
+    height: auto;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .total-credits {
+    background-color: #f5f5f5;
+    color: #036;
+    width: 100%;
+    height: 30px;
+    border: #036 solid 1px;
+    box-sizing: border-box;
+  }
+  .course-card {
+    background-color: #036;
+    color: #f5f5f5;
+    width: 100%;
+    height: 40px;
+    margin: 5px;
+  }
   /********************************* Footer Styling ********************************/
   .footer {
     background-color: #003366;

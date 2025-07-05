@@ -13,11 +13,9 @@
     <title>WDD231 Frontend Development 1</title>
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/small.css">
-    <link rel="stylesheet" href="./styles/medium.css">
     <link rel="stylesheet" href="./styles/larger.css">
-    <script src="script.js" defer></script>
     <script src="./scripts/navigation.js" defer></script>
-    <script src="course.js" defer></script>
+    <script src="./scripts/course.js" defer></script>
     <script src="./scripts/dates.js" defer></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -52,9 +50,9 @@
             <div class="home-2">
                 <p class="me">Web Certificate Courses</p>
                 <div class="course-buttons">
-                    <button id="all" class="course-button" onclick="showCourse('WDD231')">All Coursed</button>
-                    <button id="cse" class="course-button" onclick="showCourse('CSE121')">CSE Courses</button>
-                    <button id="wdd" class="course-button" onclick="showCourse('CSE122')">WDD Courses</button>
+                    <button id="all" class="course-button" type="button">All Courses</button>
+                    <button id="cse" class="course-button" type="button">CSE Courses</button>
+                    <button id="wdd" class="course-button" type="button">WDD Courses</button>
                 </div>
                 <div id="courses" class="courses"></div>
             </div>

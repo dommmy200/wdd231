@@ -87,77 +87,45 @@ function createAndAppend(total, output) {
     totalCreditsOutput.textContent = `Total Credits: ${total}`;
     output.appendChild(totalCreditsOutput);
 }
+function createOutputHTML(courseArray) {
+    let output = document.querySelector('#courses');
+    output.innerHTML = ''; // Clear previous output
+    let totalCredits = 0;
+    let courseCardContainer = document.createElement('div');
+    courseCardContainer.classList.add('cards-container');
+
+    courseArray.forEach(course => {
+        totalCredits += course.credits;
+        let subjNum = `${course.subject} ${course.number}`;
+        let courseCard = document.createElement('span');
+        courseCard.classList.add('course-card');
+        if (course.completed) {
+            let textNode = document.createTextNode(`✓ ${subjNum}`);
+            courseCard.appendChild(textNode);
+            courseCardContainer.appendChild(courseCard);
+        } else {
+            let textNode = document.createTextNode(`${subjNum}`);
+            courseCard.appendChild(textNode);
+            courseCardContainer.appendChild(courseCard);
+        }
+    });
+
+    output.innerHTML = courseCardContainer.outerHTML; // Append all course cards at once
+    createAndAppend(totalCredits, output);
+}
 let allBtn = document.querySelectorAll('.course-buttons .course-button');
 allBtn.forEach(btn => {
     btn.addEventListener('click', () => {
-        let totalCredits = 0;
         
         if (btn.id === 'all') {
-            let checkmark = '✓';
-            let coursesOutput = document.querySelector('#courses');
             let courses = getCourses();
-            coursesOutput.innerHTML = ''; // Clear previous output
-            let courseCardContainer = document.createElement('div');
-            courseCardContainer.classList.add('cards-container');
-            
-            courses.forEach(course => {
-                totalCredits += course.credits;
-                let subjNum = `${course.subject} ${course.number}`;
-                let courseCard = document.createElement('span');
-                courseCard.classList.add('course-card');
-                if (course.completed) {
-                    let textNode = document.createTextNode(`${checkmark} ${subjNum}`);
-                    courseCard.appendChild(textNode);
-                    courseCardContainer.appendChild(courseCard);
-                }
-                else {
-                    let textNode = document.createTextNode(`${subjNum}`);
-                    courseCard.appendChild(textNode);
-                    courseCardContainer.appendChild(courseCard);
-                }
-            });
-            coursesOutput.innerHTML = courseCardContainer.outerHTML; // Append all course cards at once
-            createAndAppend(totalCredits, coursesOutput);
+            createOutputHTML(courses);
         } else if (btn.id === 'cse') {
-            let checkmark = '✓';
-            let coursesOutput = document.querySelector('#courses');
             let courses = getCourses().filter(course => course.subject === 'CSE');
-            coursesOutput.innerHTML = ''; // Clear previous output
-            courses.forEach(course => {
-                totalCredits += course.credits;
-                let subjNum = `${course.subject} ${course.number}`;
-                let courseCard = document.createElement('span');
-                courseCard.classList.add('course-card');
-                if (course.completed) {
-                    courseCard.textContent = `${checkmark} ${subjNum}`;
-                    coursesOutput.appendChild(courseCard);
-                }
-                else {
-                    courseCard.textContent = `${subjNum}`;
-                    coursesOutput.appendChild(courseCard);
-                }
-            });
-            createAndAppend(totalCredits, coursesOutput);
+            createOutputHTML(courses);
         } else if (btn.id === 'wdd') {
-            let checkmark = '✓';
-            let coursesOutput = document.querySelector('#courses');
             let courses = getCourses().filter(course => course.subject === 'WDD');
-            coursesOutput.innerHTML = ''; // Clear previous output
-            courses.forEach(course => {
-                totalCredits += course.credits;
-                let subjNum = `${course.subject} ${course.number}`;
-                let courseCard = document.createElement('span');
-                courseCard.classList.add('course-card');
-                if (course.completed) {
-                    courseCard.textContent = `${checkmark} ${subjNum}`;
-                    coursesOutput.appendChild(courseCard);
-                }
-                else {
-                    courseCard.textContent = `${subjNum}`;
-                    coursesOutput.appendChild(courseCard);
-                }
-            });
-            createAndAppend(totalCredits, coursesOutput);
+            createOutputHTML(courses);
         }
     })
 });

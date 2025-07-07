@@ -4,7 +4,7 @@ function getCurrentYear() {
 function insertDateNameAndIcon() {
     const iconCurrentYear = document.querySelector("#currentYear");
     const nameCountry = document.querySelector("#nameCountry");
-    nameCountry.textContent = ` ● Abah Dominic Odeh ● Jos/Nigeria`;
+    nameCountry.textContent = ` ● Abah Dominic Odeh ● Jos/Nigeria | Latter-day Prophets`;
 
     const icon = "\u00a9";
     const date = getCurrentYear();

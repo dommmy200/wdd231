@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/cb-enriched.ico" type="image/x-icon" sizes="16x16 32x32 48x48" id="favicon">
     <meta name="author" content="Abahdominic Odeh">
     <meta name="description"
-        content="WDD231 Frontend Development 1 - This page is an advancement on the WDD131 which dwelled on the basic of frontend development by digging deep into the granular and nuances of web development.">
+        content="Prophets - This page is an advancement on the WDD131 which dwelled on the basic of frontend development by digging deep into the granular and nuances of web development.">
     <meta name="keywords"
         content="WDD231, Frontend Development, Dominic Abah, personal webpage, web development, HTML, CSS, JavaScript">
-    <meta property="og:title" content="WDD231 Frontend Development 1">
-    <meta property="og:description" content="WDD231 Frontend Development 1 - This page is an advancement on the WDD131 which dwelled on the basic of frontend development by digging deep into the granular and nuances of web development.">
+    <meta property="og:title" content="Prophets">
+    <meta property="og:description" content="Prophets - This page is an advancement on the WDD131 which dwelled on the basic of frontend development by digging deep into the granular and nuances of web development.">
     <meta property="og:image" content="./images/wdd231-pix.webp">
-    <meta property="og:url" content="https://dommmy200.github.io/wdd231/">
+    <meta property="og:url" content="https://dommmy200.github.io/wdd231/prophets.html">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/small.css">
     <link rel="stylesheet" href="./styles/larger.css">
-    <link rel="icon" href="./images/cb-enriched.ico" type="image/x-icon" sizes="16x16 32x32 48x48" id="favicon">
     <script src="./scripts/navigation.js" defer></script>
     <script src="./scripts/course.js" defer></script>
     <script src="./scripts/dates.js" defer></script>
-    <title>WDD231 Frontend Development 1</title>
+    <script src="./scripts/prophets.js" defer></script>
+    <title>Prophets</title>
 </head>
-
 <body>
     <header id="header" class="header">
         <img src="./images/chamber-home-white.svg" alt="chamber of commerce logo" class="logo" height="512" width="512">
-        <span class="my-name">Abah Dominic Odeh</span>
+        <span class="my-name">Latter-day Prophets</span>
         <button id="ham-btn" class="hamburger" type="button" aria-label="Show or hide menu"></button>
     </header>
     <nav id="nav" class="nav">
@@ -37,45 +36,8 @@
             <!-- <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li> -->
         </ul>
     </nav>
-    <main class="main">
-        <h1 class="home-h1">Home</h1>
-        <section id="home" class="section">
-            <div class="home-1">
-                <div class="home-11">
-                    <p class="me">About Me</p>
-                    <p class="about-me">
-                        My name is Abah Dominic Odeh and I am a manager with a one and half year of experience as an airspace manager. Currently, I am the Airspace Manager of Yakubu Gowon Airport in Jos, Plateau state, and I have successfully organised a staff orientation and code of conduct training of 94 staff with a 71% attendance rate.<br><br>
-                        
-                        Prior to this appointment I was also an Airspace Manager in a smaller airport: Danbaba Suntai Airport in Jalingo, Taraba state where I gained a lot of experience in managing scarse resources. It is here that I leverage collaborating with other top managers of aviation parastatals: Federal Airports Authority of Nigeria and Nigeria Meteorological Agency.<br><br>
-                        
-                        One thing that I am most proud of is the recognition for my contribution to the collaboration which earned me a promotion from the small airport to a bigger one with more responsibilities where I am currently.<br>
-                    
-                        My motivation is the need to solve meaningful problems with others to build effective solutions.
-                </div>
-                <div class="home-12">
-                    <p class="me">Student Photo</p>
-                    <img src="./images/wdd231-pix.webp" alt="Student Photo" class="student-photo" width="200"
-                        height="200">
-                </div>
-            </div>
-            <div class="home-2">
-                <p class="me">Web Certificate Courses</p>
-                <div class="course-buttons">
-                    <button id="all" class="course-button" type="button">All Courses</button>
-                    <button id="cse" class="course-button" type="button">CSE Courses</button>
-                    <button id="wdd" class="course-button" type="button">WDD Courses</button>
-                </div>
-                <div id="courses" class="courses"></div>
-            </div>
-        </section>
-        <section id="chamber" class="section">
-            <h2>Chamber of Commerce</h2>
-            <p>Information about the Chamber of Commerce and its role in supporting local businesses.</p>
-        </section>
-        <section id="projects" class="section">
-            <h2>My Projects</h2>
-            <p>Here you can find a selection of my projects showcasing my skills in frontend development.</p>
-        </section>
+    <main>
+        <div id="prophetsCards" class="prophets-cards"></div>
     </main>
     <footer id="footer" class="footer">
         <div class="social-links">
@@ -109,5 +71,4 @@
         </div>
     </footer>
 </body>
-
 </html>

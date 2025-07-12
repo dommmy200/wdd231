@@ -26,6 +26,7 @@ function createProphetCard(prophet) {
 
     const image = document.createElement('img');
     image.setAttribute('src', prophet.imageurl);
+    image.setAttribute('loading', 'lazy');
     image.setAttribute('alt', `${prophet.name} ${prophet.lastname}`);
     card.appendChild(image);
 

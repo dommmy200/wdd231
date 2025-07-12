@@ -1,0 +1,182 @@
+[
+    {
+        "id": "dir-1",
+        "company_name": "Bright King",
+        "image": "chamber/images/brightking.webp",
+        "alternate": "Bright King",
+        "description": "This is the first directory.",
+        "phone": "123-456-7890",
+        "website": "https://example.com/dir1"
+    },
+    {
+        "id": "dir-2",
+        "name": "ByteBloom",
+        "image": "chamber/images/byteboom.webp",
+        "alternate": "Byte Boom",
+        "description": "This is the second directory.",
+        "phone": "123-456-7891",
+        "website": "https://example.com/dir2"
+    },
+    {
+        "id": "dir-3",
+        "name": "Code Nest",
+        "image": "chamber/images/codenest.webp",
+        "alternate": "Code Nest",
+        "description": "This is the third directory.",
+        "phone": "123-456-7892",
+        "website": "https://example.com/dir3"
+    },
+    {
+        "id": "dir-4",
+        "name": "Echo Thread",
+        "image": "chamber/images/echothread.webp",
+        "alternate": "Echo Thread",
+        "description": "This is the fourth directory.",
+        "phone": "123-456-7893",
+        "website": "https://example.com/dir4"
+    },
+    {
+        "id": "dir-5",
+        "company_name": "Echo Vale Lab",
+        "image": "chamber/images/echovalelabs.webp",
+        "alternate": "Echo Vale Lab",
+        "description": "This is the fifth directory.",
+        "phone": "123-456-7894",
+        "website": "https://example.com/dir5"
+    },
+    {
+        "id": "dir-6",
+        "company_name": "Fablehaus",
+        "image": "chamber/images/fablehaus.webp",
+        "alternate": "Fablehaus",
+        "description": "This is the sixth directory.",
+        "phone": "123-456-7895",
+        "website": "https://example.com/dir6"
+    },
+    {
+        "id": "dir-7",
+        "name": "Horizon Bridge",
+        "image": "chamber/images/horizonal.webp",
+        "alternate": "Horizontal Bridge",
+        "description": "This is the seventh directory.",
+        "phone": "123-456-7896",
+        "website": "https://example.com/dir7"
+    },
+    {
+        "id": "dir-8",
+        "name": "Inkwell & Iron",
+        "image": "chamber/images/ink-well.webp",
+        "alternate": "Inkwell & Iron",
+        "description": "This is the eight directory.",
+        "phone": "123-456-7897",
+        "website": "https://example.com/dir8"
+    },
+    {
+        "id": "dir-9",
+        "name": "Kindra Works",
+        "image": "chamber/images/kindraworks.webp",
+        "alternate": "Kindra Works",
+        "description": "This is the second directory.",
+        "phone": "123-456-7898",
+        "website": "https://example.com/dir9"
+    },
+    {
+        "id": "dir-10",
+        "name": "Looplytics",
+        "image": "chamber/images/looplytics.webp",
+        "alternate": "Looplytics",
+        "description": "This is the tenth directory.",
+        "phone": "123-456-7891",
+        "website": "https://example.com/dir2"
+    },
+    {
+        "id": "dir-11",
+        "name": "Vireo Circle",
+        "image": "chamber/images/vireo.webp",
+        "alternate": "Vireo Circle",
+        "description": "This is the eleventh directory.",
+        "phone": "123-456-7899",
+        "website": "https://example.com/dir11"
+    },
+    {
+        "id": "dir-12",
+        "company_name": "Lumen Roots",
+        "image": "chamber/images/lumenroot.webp",
+        "alternate": "Lumen Roots",
+        "description": "This is the twelveth directory.",
+        "phone": "123-456-7900",
+        "website": "https://example.com/dir12"
+    },
+    {
+        "id": "dir-13",
+        "name": "Modecraft Collective",
+        "image": "chamber/images/modecraft.webp",
+        "alternate": "Modecraft Collective",
+        "description": "This is the thirteenth directory.",
+        "phone": "123-456-7901",
+        "website": "https://example.com/dir13"
+    },
+    {
+        "id": "dir-14",
+        "name": "NimbusCore",
+        "image": "chamber/images/nimbuscore.webp",
+        "alternate": "NimbusCore",
+        "description": "This is the fourteenth directory.",
+        "phone": "123-456-7902",
+        "website": "https://example.com/dir14"
+    },
+    {
+        "id": "dir-15",
+        "name": "NorthAxis Group",
+        "image": "chamber/images/northaxis.webp",
+        "alternate": "NorthAxis Group",
+        "description": "This is the fifteenth directory.",
+        "phone": "123-456-7903",
+        "website": "https://example.com/dir15"
+    },
+    {
+        "id": "dir-16",
+        "name": "Pivota Strategies",
+        "image": "chamber/images/pivota.webp",
+        "alternate": "Pivota Strategies",
+        "description": "This is the sixteenth directory.",
+        "phone": "123-456-7904",
+        "website": "https://example.com/dir16"
+    },
+    {
+        "id": "dir-17",
+        "name": "PixelLoom Studio",
+        "image": "chamber/images/pixelloom.webp",
+        "alternate": "PixelLoom Studio",
+        "description": "This is the seventeenth directory.",
+        "phone": "123-456-7905",
+        "website": "https://example.com/dir17"
+    },
+    {
+        "id": "dir-18",
+        "name": "Slate & Ember",
+        "image": "chamber/images/slate-ember.webp",
+        "alternate": "Slate & Ember",
+        "description": "This is the eighteenth directory.",
+        "phone": "123-456-7906",
+        "website": "https://example.com/dir18"
+    },
+    {
+        "id": "dir-19",
+        "company_name": "Swiftforge",
+        "image": "chamber/images/swiftforge.webp",
+        "alternate": "Swiftforge",
+        "description": "This is the nineteenth directory.",
+        "phone": "123-456-7907",
+        "website": "https://example.com/dir19"
+    },
+    {
+        "id": "dir-20",
+        "name": "TerraPulse",
+        "image": "chamber/images/terrapulse.webp",
+        "alternate": "TerraPulse",
+        "description": "This is the twenteth directory.",
+        "phone": "123-456-7908",
+        "website": "https://example.com/dir20"
+    }
+]

@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="../chamber/styles/smaller.css">
     <link rel="stylesheet" href="../chamber/styles/larger.css">
     <link rel="icon" href="../chamber/images/favicon-chamb.ico" type="image/x-icon" sizes="16x16 32x32 48x48" id="favicon">
-    <script src="../chamber/scripts/chamber.js" defer></script>
-    <script src="../chamber/scripts/utilities.js" defer></script>
+    <script type="module" src="../chamber/scripts/chamber.mjs" defer></script>
+    <script type="module" src="../chamber/scripts/utilities.mjs" defer></script>
     <script src="../chamber/scripts/navigation.js" defer></script>
     <script src="./scripts/dates.js" defer></script>
     <title>Ugbokolo Chamber of Commerce</title>
@@ -40,8 +40,12 @@
             <h2>Directory</h2>
             <p>Welcome to the Ugbokolo Chamber of Commerce directory. Here you can find a list of our members and their contact information.</p>
 
+            <div class="btn-container">
+                <button type="button" id="btn-one" class="btn-one"></button>
+                <button type="button" id="btn-two" class="btn-two"></button>
+            </div> 
             <!-- Directory content will be dynamically loaded here -->
-            <div id="directory-content"></div>
+            <div id="directoryContent"></div>
         </main>
 
         <footer>

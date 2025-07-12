@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.biz-card {
+    display: inline-block;
+    background-color: rgb(214, 207, 207);
+    width: 400px;
+    height: 60%;
+    padding: 10px;
+    text-align: center;
+    gap: 15px;
+    border: #f7f3f3 solid 1px;
+    border-radius: 6px;
+}
+.biz-card img {
+    width: 200px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.4);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+main p {
+    display: block;
+    flex-direction: row;
+    margin: 20px auto;
+    height: 40px;
+    width: 60%;
+    text-align: center;
+    padding-top: 7px;
+    background-color: #f7f3f3;
+    border-radius: 5px;
+}
+.description, .website {
+    display: block;
+    margin: 6px auto;
+    width: 200px;
+    background-color: #cbcaca;
+}
+
+.btn-one, .btn-two {
+    /* display: inline; */
+    background-image: url(../images/icons-list2.webp);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.btn-two {
+    /* display: inline; */
+    background-image: url(../images/icon-thumbnails.webp);
+    /* width: 60px;
+    height: 60px; */
+}
+.btn-container {
+    padding: 5px;
+}
+.directory-content {
+    display: inline;
+}
+
+.directory-content.show .biz-card {
+    display: block;
+}
+.directory-content.show .biz-card img {
+    display: none;
+}
+.website {
+    cursor: pointer;
+}

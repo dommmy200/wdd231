@@ -1,4 +1,4 @@
-export async function readCardFile() {
+async function readCardFile() {
   try {
     const response = await fetch("./data/dir-cards.json"); // Fetch the JSON file
     if (!response.ok) {
@@ -6,88 +6,98 @@ export async function readCardFile() {
     }
     
     const data = await response.json();
-    console.log(data); // Optional: log the data
     return data; // Return the data for further processing
   } catch (error) {
     console.error('Error fetching card data:', error);
     throw error; // Rethrow the error for handling by the caller
   }
 }
-export function createCardDiv() {
-  const div = document.createElement('div');
-  return div;
-}
-export function drawCards(data, card, div) {
-  // const div = document.createElement('div');
-  const h2 = document.createElement('h2');
-  const phone = document.createElement('p');
-  const description = document.createElement('p');
-  description.classList.add('description');
-  const website = document.createElement('a');
-  website.classList.add('website');
-  
-  const img = document.createElement('img');
-  // const path = './images/';
-  img.setAttribute('src', `${data.image}`);
-  img.setAttribute('loading', 'lazy');
-  img.setAttribute('alt', `${data.alternate}`);
 
-  const name = document.createTextNode(`${data.name}`);
-  h2.appendChild(name);
-
-  const text = document.createTextNode(`${data.description}`);
-  description.appendChild(text);
-
-  const webContent = document.createTextNode(`${data.website}`);
-  website.setAttribute('href', `${data.website}`);
-  website.appendChild(webContent);
-
-  const phon = document.createTextNode(`${data.phone}`);
-  phone.appendChild(phon);
-  
-  div.setAttribute('id', 'bizCard');
-  div.classList.add('biz-card');
-  div.appendChild(h2);
-  div.appendChild(img);
-  div.appendChild(description);
-  div.appendChild(website);
-  div.appendChild(phon)
-  card.appendChild(div);
-}
-
-function getSelector() {
-  const card = document.querySelector('#bizCard');
-  return card;
-}
-
-export function clickListBtn() {
-  const card = getSelector();
-  const buttonOne = document.querySelector('#btn-one');
-  const buttonTwo = document.querySelector('#btn-two');
-  buttonOne.addEventListener('click', () => {
-    // buttonTwo.classList.toggle('show');
-    buttonOne.style.backgroundColor = 'forestgreen';
-    buttonOne.style.border = '2px solid darkgreen';
-    
-    buttonTwo.style.backgroundColor = '';
-    buttonTwo.style.border = '';
-    console.log(card);
-    card.classList.toggle('show');
+function drawCards() {
+  const card = document.querySelector('#directory-content');
+  card.innerHTML = '';
+  readCardFile().then(data => {
+      data.forEach(item => {
+      // console.log(item); // Optional: log the item
+      const div = document.createElement('div');
+      div.classList.add('biz-card');
+      const h2 = document.createElement('h2');
+      const phone = document.createElement('p');
+      const description = document.createElement('p');
+      description.classList.add('description');
+      const website = document.createElement('a');
+      website.classList.add('website');
+      
+      const img = document.createElement('img');
+      img.setAttribute('src', `${item.image}`);
+      img.setAttribute('loading', 'lazy');
+      img.setAttribute('alt', `${item.alternate}`);
+      
+      const name = document.createTextNode(`${item.name}`);
+      h2.appendChild(name);
+      
+      const text = document.createTextNode(`${item.description}`);
+      description.appendChild(text);
+      
+      const webContent = document.createTextNode(`${item.website}`);
+      website.setAttribute('href', `${item.website}`);
+      website.appendChild(webContent);
+      
+      const phon = document.createTextNode(`${item.phone}`);
+      phone.appendChild(phon);
+      
+      div.setAttribute('id', 'bizCard');
+      div.appendChild(h2);
+      div.appendChild(img);
+      div.appendChild(description);
+      div.appendChild(website);
+      div.appendChild(phon)
+      card.appendChild(div);
+    });
   });
 }
 
-export function clickThumbnailBtn() {
-  const card = getSelector();
-  const buttonOne = document.querySelector('#btn-one');
-  const buttonTwo = document.querySelector('#btn-two');
-  buttonTwo.addEventListener('click', () => {
-    // buttonOne.classList.toggle('show');
-    buttonTwo.style.backgroundColor = 'forestgreen';
-    buttonTwo.style.border = '2px solid darkgreen';
-    
-    buttonOne.style.backgroundColor = '';
-    buttonOne.style.border = '';
-    
-    card.classList.toggle('show');
+function drawLists() {
+  const card = document.getElementById('directory-content');
+  card.innerHTML = '';
+  readCardFile().then(data => {
+
+    data.forEach((item, count) => {
+      const listDiv = document.createElement('div');
+      listDiv.classList.add('list-div');
+      if (count%2 === 0) {
+        listDiv.style.backgroundColor = '#f5f5f5';
+      }
+      const spanCount = document.createElement('span');
+      const spanName = document.createElement('span');
+      const spanDescription = document.createElement('span');
+      const spanWebsite = document.createElement('span');
+      const spanPhone = document.createElement('span');
+
+      spanCount.innerHTML = `<span>${count+1}:</span>`;
+      spanName.innerHTML = `<span class='name'>${item.name}</span>`;
+      spanDescription.innerHTML = `<span class='description'>${item.description}</span>`;
+      spanWebsite.innerHTML = `<span class='website'>${item.website}</span>`;
+      spanPhone.innerHTML = `<span class='phone'>${item.phone}</span></div>`;
+      
+      listDiv.appendChild(spanCount);
+      listDiv.appendChild(spanName);
+      listDiv.appendChild(spanDescription);
+      listDiv.appendChild(spanWebsite);
+      listDiv.appendChild(spanPhone);
+      
+      card.appendChild(listDiv);
+    });
   });
+}
+
+export function createCardView() {
+  const data = readCardFile();
+  drawCards(data);
+}
+
+export function createListView() {
+  const data = readCardFile();
+  const card = document.getElementById('#directory-content');
+  drawLists(data, card);
 }

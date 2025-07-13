@@ -23,33 +23,34 @@
     <title>Ugbokolo Chamber of Commerce</title>
 </head>
 <body>
-    div class="container">
+    <div class="container">
         <header>
+            <div><img class="dir-logo" src="/chamber/images/chmb-logo2.webp" alt="Chamber Logo" width="50px" height="50px"></div>
             <h1>Ugbokolo Chamber of Commerce</h1>
-            <nav>
-                <ul>
-                    <li><a href="../chamber/index.html">Home</a></li>
-                    <li><a href="../chamber/directory.html">Directory</a></li>
-                    <li><a href="../chamber/events.html">Join</a></li>
-                    <li><a href="../chamber/contact.html">Discover</a></li>
-                </ul>
-            </nav>
         </header>
+        <nav id="nav" class="navigation">
+            <ul class="nav-ulist">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#directory.html" class="nav-link">Chamber</a></li>
+                <li class="nav-item"><a href="../final/project.html" class="nav-link">Final</a></li>
+                <!-- <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li> -->
+            </ul>
+        </nav>
+    <main>
+        <h2>Directory</h2>
+        <p>Welcome to the Ugbokolo Chamber of Commerce directory. Here you can find a list of our members and their contact information.</p>
+        <div class="btn-container">
+            <label class="switch">
+                <input title="toggle-switch" type="checkbox" id="toggle-switch">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <!-- Directory content will be dynamically loaded here -->
+        <div id="directory-content"></div>
+    </main>
 
-        <main>
-            <h2>Directory</h2>
-            <p>Welcome to the Ugbokolo Chamber of Commerce directory. Here you can find a list of our members and their contact information.</p>
-
-            <div class="btn-container">
-                <button type="button" id="btn-one" class="btn-one"></button>
-                <button type="button" id="btn-two" class="btn-two"></button>
-            </div> 
-            <!-- Directory content will be dynamically loaded here -->
-            <div id="directoryContent"></div>
-        </main>
-
-        <footer>
-            <p>&copy; 2023 Ugbokolo Chamber of Commerce. All rights reserved.</p>
-        </footer>
+    <footer class="dir-footer">
+        <p>&copy; 2023 Ugbokolo Chamber of Commerce. All rights reserved.</p>
+    </footer>
 </body>
 </html>

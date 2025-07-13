@@ -1,11 +1,15 @@
-import { readCardFile, drawCards, clickListBtn, clickThumbnailBtn, createCardDiv } from "./utilities.mjs";
+import { createCardView, createListView } from "./utilities.mjs";
 
-readCardFile().then(foo => {
-  const card = document.querySelector('#directoryContent');
-  for (let i = 0; i < foo.length; i++) {
-    const div = createCardDiv();
-    drawCards(foo[i], card, div);
-  }
-});
-clickListBtn();
-clickThumbnailBtn();
+function toggleSwitching() {
+    const toggleSwitch = document.getElementById('toggle-switch');
+    toggleSwitch.addEventListener('change', () => {
+        if (toggleSwitch.checked) {
+            console.log('Switch in ON')
+            createCardView();
+        } else {
+            console.log('Switch in OFF')
+            createListView();
+        }
+    });
+}
+toggleSwitching();

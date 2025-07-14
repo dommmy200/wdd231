@@ -1,6 +1,6 @@
 async function readCardFile() {
   try {
-    const response = await fetch("./data/dir-cards.json"); // Fetch the JSON file
+    const response = await fetch("./data/members.json"); // Fetch the JSON file
     if (!response.ok) {
       throw new Error('Failed to fetch card data');
     }

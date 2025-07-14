@@ -89,25 +89,23 @@ header div {
     margin-bottom: 5px;
 }
 /****************************** Style Main *********************************/
+.welcome {
+    font-size:large;
+    margin-bottom: 0px;
+    background-color: #f7f3f3;
+    border-radius: 5px;
+    padding: 5px;
+}
 main {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: center; 
     width: 90%;
-    height: 750px;
+    height: 800px;
     margin: 0 auto;
     overflow-y: auto;
-}
-main p {
-    display: block;
-    flex-direction: row;
-    margin: 20px auto;
-    height: 40px;
-    width: 60%;
-    text-align: center;
-    padding-top: 7px;
-    background-color: #f7f3f3;
-    border-radius: 5px;
+    column-gap: 5px;
+    border: #030303 solid 1px;
 }
 main h2 {
     font-size: 60px;
@@ -142,6 +140,7 @@ main h2 {
     display: inline-block;
     width: 200px;
     height: 68px;
+    margin-top: 15px;
 }
 .switch input {
     opacity: 0;

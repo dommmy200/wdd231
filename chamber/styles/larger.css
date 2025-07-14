@@ -48,6 +48,10 @@
     .biz-card h2 {
         font-size: 50px;
     }
+    /****************************** Style Main *********************************/
+    .welcome {
+        font-size:x-large;
+    }
     /****************************** Style List View *********************************/
     .list-div {
         flex-direction: row;

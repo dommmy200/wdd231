@@ -4,7 +4,7 @@
         "name": "Bright King",
         "image": "./images/brightking.webp",
         "alternate": "Bright King",
-        "description": "This is the first directory.",
+        "description": "This is the 1st directory.",
         "phone": "123-456-7890",
         "website": "https://example.com/dir1"
     },
@@ -13,7 +13,7 @@
         "name": "ByteBloom",
         "image": "./images/byteboom.webp",
         "alternate": "Byte Boom",
-        "description": "This is the second directory.",
+        "description": "This is the 2nd directory.",
         "phone": "123-456-7891",
         "website": "https://example.com/dir2"
     },
@@ -22,7 +22,7 @@
         "name": "Code Nest",
         "image": "./images/codenest.webp",
         "alternate": "Code Nest",
-        "description": "This is the third directory.",
+        "description": "This is the 3rd directory.",
         "phone": "123-456-7892",
         "website": "https://example.com/dir3"
     },
@@ -31,7 +31,7 @@
         "name": "Echo Thread",
         "image": "./images/echothread.webp",
         "alternate": "Echo Thread",
-        "description": "This is the fourth directory.",
+        "description": "This is the 4th directory.",
         "phone": "123-456-7893",
         "website": "https://example.com/dir4"
     },
@@ -40,7 +40,7 @@
         "name": "Echo Vale Lab",
         "image": "./images/echovalelabs.webp",
         "alternate": "Echo Vale Lab",
-        "description": "This is the fifth directory.",
+        "description": "This is the 5th directory.",
         "phone": "123-456-7894",
         "website": "https://example.com/dir5"
     },
@@ -49,7 +49,7 @@
         "name": "Fablehaus",
         "image": "./images/fablehaus.webp",
         "alternate": "Fablehaus",
-        "description": "This is the sixth directory.",
+        "description": "This is the 6th directory.",
         "phone": "123-456-7895",
         "website": "https://example.com/dir6"
     },
@@ -58,7 +58,7 @@
         "name": "Horizon Bridge",
         "image": "./images/horizonal.webp",
         "alternate": "Horizontal Bridge",
-        "description": "This is the seventh directory.",
+        "description": "This is the 7th directory.",
         "phone": "123-456-7896",
         "website": "https://example.com/dir7"
     },
@@ -67,7 +67,7 @@
         "name": "Inkwell & Iron",
         "image": "./images/ink-well.webp",
         "alternate": "Inkwell & Iron",
-        "description": "This is the eight directory.",
+        "description": "This is the 8th directory.",
         "phone": "123-456-7897",
         "website": "https://example.com/dir8"
     },
@@ -76,7 +76,7 @@
         "name": "Kindra Works",
         "image": "./images/kindraworks.webp",
         "alternate": "Kindra Works",
-        "description": "This is the second directory.",
+        "description": "This is the 9th directory.",
         "phone": "123-456-7898",
         "website": "https://example.com/dir9"
     },
@@ -85,7 +85,7 @@
         "name": "Looplytics",
         "image": "./images/looplytics.webp",
         "alternate": "Looplytics",
-        "description": "This is the tenth directory.",
+        "description": "This is the 10th directory.",
         "phone": "123-456-7891",
         "website": "https://example.com/dir2"
     },
@@ -94,7 +94,7 @@
         "name": "Vireo Circle",
         "image": "./images/vireo.webp",
         "alternate": "Vireo Circle",
-        "description": "This is the eleventh directory.",
+        "description": "This is the 11th directory.",
         "phone": "123-456-7899",
         "website": "https://example.com/dir11"
     },
@@ -103,7 +103,7 @@
         "name": "Lumen Roots",
         "image": "./images/lumenroot.webp",
         "alternate": "Lumen Roots",
-        "description": "This is the twelveth directory.",
+        "description": "This is the 12th directory.",
         "phone": "123-456-7900",
         "website": "https://example.com/dir12"
     },
@@ -112,7 +112,7 @@
         "name": "Modecraft Collective",
         "image": "./images/modecraft.webp",
         "alternate": "Modecraft Collective",
-        "description": "This is the thirteenth directory.",
+        "description": "This is the 13th directory.",
         "phone": "123-456-7901",
         "website": "https://example.com/dir13"
     },
@@ -121,7 +121,7 @@
         "name": "NimbusCore",
         "image": "./images/nimbuscore.webp",
         "alternate": "NimbusCore",
-        "description": "This is the fourteenth directory.",
+        "description": "This is the 14th directory.",
         "phone": "123-456-7902",
         "website": "https://example.com/dir14"
     },
@@ -130,7 +130,7 @@
         "name": "NorthAxis Group",
         "image": "./images/northaxis.webp",
         "alternate": "NorthAxis Group",
-        "description": "This is the fifteenth directory.",
+        "description": "This is the 15th directory.",
         "phone": "123-456-7903",
         "website": "https://example.com/dir15"
     },
@@ -139,7 +139,7 @@
         "name": "Pivota Strategies",
         "image": "./images/pivota.webp",
         "alternate": "Pivota Strategies",
-        "description": "This is the sixteenth directory.",
+        "description": "This is the 16th directory.",
         "phone": "123-456-7904",
         "website": "https://example.com/dir16"
     },
@@ -148,16 +148,16 @@
         "name": "PixelLoom Studio",
         "image": "./images/pixelloom.webp",
         "alternate": "PixelLoom Studio",
-        "description": "This is the seventeenth directory.",
+        "description": "This is the 17th directory.",
         "phone": "123-456-7905",
         "website": "https://example.com/dir17"
     },
     {
         "id": "dir-18",
-        "name": "Slate & Ember",
+        "name": "Slate&Ember",
         "image": "./images/slate-ember.webp",
         "alternate": "Slate & Ember",
-        "description": "This is the eighteenth directory.",
+        "description": "This is the 18th directory.",
         "phone": "123-456-7906",
         "website": "https://example.com/dir18"
     },
@@ -166,7 +166,7 @@
         "name": "Swiftforge",
         "image": "./images/swiftforge.webp",
         "alternate": "Swiftforge",
-        "description": "This is the nineteenth directory.",
+        "description": "This is the 19th directory.",
         "phone": "123-456-7907",
         "website": "https://example.com/dir19"
     },
@@ -175,7 +175,7 @@
         "name": "TerraPulse",
         "image": "./images/terrapulse.webp",
         "alternate": "TerraPulse",
-        "description": "This is the twenteth directory.",
+        "description": "This is the 20th directory.",
         "phone": "123-456-7908",
         "website": "https://example.com/dir20"
     }

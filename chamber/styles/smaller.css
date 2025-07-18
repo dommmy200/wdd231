@@ -97,7 +97,7 @@ body {
     height: 50%;
 } */
 .hero-image {
-  height: 40vh;
+  height: 37vh;
   width: 100%;
   background-image: url('../images/idoma-drums.webp');
   background-size: cover;
@@ -213,6 +213,54 @@ header div {
 .biz-card h2 {
     font-size: 20px;
     margin-bottom: 5px;
+}
+/****************************** Style Homepage Card *********************************/
+.home-cards {
+    display: flex;
+    flex-direction: row;
+    width: 71%;
+    margin: 5px auto;
+    justify-content: space-between;
+}
+.three-cards {
+    display: flex;
+    flex-direction: column;
+    background-color: #cbcaca;
+    width: 33%;
+    height: 200px;
+    border: #000000 solid 1px;
+    border-radius: 7px 7px 0 0;
+    margin: 5px;
+}
+main h1 {
+    text-align: left;
+    margin: 5px auto;
+    padding-left: 7px;
+    width: 71%;
+}
+.card-top {
+}
+.card-bottom {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas:
+    "before after";
+
+}
+.card-bottom img {
+    grid-area: before;
+
+    display: block;
+    margin: 15px;
+    border-radius: 4px;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.4);
+}
+.bottom-right {
+    grid-area: after;
+    width: 100%;
+    text-align: left;
+    padding: 5px;
+    /* background-color: #923333; */
 }
 /****************************** Style Main *********************************/
 .welcome {

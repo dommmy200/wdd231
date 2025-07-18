@@ -12,10 +12,76 @@ async function readCardFile() {
     throw error; // Rethrow the error for handling by the caller
   }
 }
-
-function drawCards() {
-  const card = document.querySelector('#directory-content');
+function selectCardContainer(identity) {
+  const card = document.querySelector(identity);
   card.innerHTML = '';
+  return card;
+}
+function drawHomepageCard(card, data) {
+  const threeObjects = data.filter((_, i) => i < 3);
+  threeObjects.forEach(item => {
+    const homeCards = document.createElement('div');
+    homeCards.classList.add('three-cards');
+    
+    const h1 = document.createElement('h1');
+    const h5 = document.createElement('h5');
+    const hr = document.createElement('div');
+    const div1 = document.createElement('div');
+    const div2 = document.createElement('div');
+    const div2Right = document.createElement('div');
+    const img = document.createElement('img');
+    const email = document.createElement('p');
+    const phone = document.createElement('p');
+    const url = document.createElement('a');
+
+    const h1Content = document.createTextNode(`${item.name}`);  
+    h1.appendChild(h1Content);
+
+    const h5Content = document.createTextNode(`${item.id}`);  
+    h5.appendChild(h5Content);
+
+    hr.style.width = '100%';
+    hr.style.height = '1px';
+    hr.style.backgroundColor = '#000';
+
+    img.setAttribute('src', `${item.image}`);
+    img.classList.add(`business-${item.id}`);
+    img.setAttribute('alt', `${item.description}`);
+    img.setAttribute('width', '100');
+
+    const emailContent = document.createTextNode(`${item.email}`);
+    email.appendChild(emailContent);
+
+    const phoneContent = document.createTextNode(`${item.phone}`);
+    phone.appendChild(phoneContent);
+
+    const urlContent = document.createTextNode(`${item.website}`);
+    url.setAttribute('href', `${item.website}`);
+    url.appendChild(urlContent);
+    
+    div1.classList.add('card-top');
+    div1.appendChild(h1);
+    div1.appendChild(h5);
+    div1.appendChild(hr);
+    
+    div2Right.classList.add('bottom-right');
+
+    div2.classList.add('card-bottom');
+    div2.appendChild(img);
+    div2Right.appendChild(email);
+    div2Right.appendChild(phone);
+    div2Right.appendChild(url);
+    div2.appendChild(div2Right)
+
+    homeCards.appendChild(div1);
+    homeCards.appendChild(div2);
+
+    card.appendChild(homeCards);
+  });
+}
+function drawCards() {
+  const directoryCard = '#directory-content';
+  const card = selectCardContainer(directoryCard);
   readCardFile().then(data => {
       data.forEach(item => {
       // console.log(item); // Optional: log the item
@@ -56,55 +122,12 @@ function drawCards() {
     });
   });
 }
-function homePageCards() {
-  const card = document.querySelector('#home-cards');
-  card.innerHTML = '';
+export function displayHomePageCards() {
+  const homeCard = '#home-cards';
+  const card = document.querySelector(homeCard);
+  // card.innerHTML = '';
   readCardFile().then(data => {
-    for (let i = 0; i < 2; i++) {
-      const homeCards = document.createElement('div');
-      homeCards.classList.add('three-cards');
-      data.forEach(item => {
-        const h1 = document.createElement('h1');
-        const h5 = document.createElement('h5');
-        const hr = document.createElement('hr');
-        const div1 = document.createElement('div');
-        const div2 = document.createElement('div');
-        const img = document.createElement('img');
-        const email = document.createElement('p');
-        const phone = document.createElement('p');
-        const url = document.createElement('a');
-
-        img.setAttribute('src', `${item.image}`);
-        img.classList.add(`business-${item.id}`);
-        img.setAttribute('alt', `${item.description}`);
-
-        const emailContent = document.createTextNode(`${item.email}`);
-        email.appendChild(emailContent);
-
-        const phoneContent = document.createTextNode(`${item.phone}`);
-        phone.appendChild(phoneContent);
-
-        const urlContent = document.createTextNode(`${item.website}`);
-        url.setAttribute('href', `${item.website}`);
-        url.appendChild(urlContent);
-        
-        div1.classList.add('card-top');
-        div1.appendChild(h1);
-        div1.appendChild(h5);
-        div1.appendChild(hr);
-        
-        div2.classList.add('card-bottom');
-        div2.appendChild(img);
-        div2.appendChild(email);
-        div2.appendChild(phone);
-        div2.appendChild(url);
-
-        homeCards.appendChild(div1);
-        homeCards.appendChild(div2);
-
-        card.appendChild(homeCards);
-      });
-    }
+    drawHomepageCard(card, data)
   });
 }
 function drawLists() {
@@ -141,13 +164,81 @@ function drawLists() {
   });
 }
 
-export function createCardView() {
+function createCardView() {
   const data = readCardFile();
   drawCards(data);
 }
 
-export function createListView() {
+function createListView() {
   const data = readCardFile();
   const card = document.getElementById('#directory-content');
   drawLists(data, card);
 }
+
+export function toggleSwitching() {
+    const toggleSwitch = document.getElementById('toggle-switch');
+    toggleSwitch.addEventListener('change', () => {
+        if (toggleSwitch.checked) {
+            console.log('Switch in ON')
+            createCardView();
+        } else {
+            console.log('Switch in OFF')
+            createListView();
+        }
+    });
+}
+export function modeSwitching() {
+    const toggleSwitch = document.getElementById('mode-switch');
+    toggleSwitch.addEventListener('change', () => {
+        if (toggleSwitch.checked) {
+            console.log('Switch in ON')
+            createCardView();
+        } else {
+            console.log('Switch in OFF')
+            createListView();
+        }
+    });
+}
+// const homeCards = document.createElement('div');
+//       homeCards.classList.add('three-cards');
+//       data.forEach(item => {
+//         const h1 = document.createElement('h1');
+//         const h5 = document.createElement('h5');
+//         const hr = document.createElement('hr');
+//         const div1 = document.createElement('div');
+//         const div2 = document.createElement('div');
+//         const img = document.createElement('img');
+//         const email = document.createElement('p');
+//         const phone = document.createElement('p');
+//         const url = document.createElement('a');
+
+//         img.setAttribute('src', `${item.image}`);
+//         img.classList.add(`business-${item.id}`);
+//         img.setAttribute('alt', `${item.description}`);
+
+//         const emailContent = document.createTextNode(`${item.email}`);
+//         email.appendChild(emailContent);
+
+//         const phoneContent = document.createTextNode(`${item.phone}`);
+//         phone.appendChild(phoneContent);
+
+//         const urlContent = document.createTextNode(`${item.website}`);
+//         url.setAttribute('href', `${item.website}`);
+//         url.appendChild(urlContent);
+        
+//         div1.classList.add('card-top');
+//         div1.appendChild(h1);
+//         div1.appendChild(h5);
+//         div1.appendChild(hr);
+        
+//         div2.classList.add('card-bottom');
+//         div2.appendChild(img);
+//         div2.appendChild(email);
+//         div2.appendChild(phone);
+//         div2.appendChild(url);
+
+//         homeCards.appendChild(div1);
+//         homeCards.appendChild(div2);
+
+//         card.appendChild(homeCards);
+//       });

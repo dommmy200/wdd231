@@ -12,4 +12,17 @@ function toggleSwitching() {
         }
     });
 }
+function modeSwitching() {
+    const toggleSwitch = document.getElementById('mode-switch');
+    toggleSwitch.addEventListener('change', () => {
+        if (toggleSwitch.checked) {
+            console.log('Switch in ON')
+            createCardView();
+        } else {
+            console.log('Switch in OFF')
+            createListView();
+        }
+    });
+}
 toggleSwitching();
+modeSwitching();

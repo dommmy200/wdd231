@@ -56,7 +56,57 @@ function drawCards() {
     });
   });
 }
+function homePageCards() {
+  const card = document.querySelector('#home-cards');
+  card.innerHTML = '';
+  readCardFile().then(data => {
+    for (let i = 0; i < 2; i++) {
+      const homeCards = document.createElement('div');
+      homeCards.classList.add('three-cards');
+      data.forEach(item => {
+        const h1 = document.createElement('h1');
+        const h5 = document.createElement('h5');
+        const hr = document.createElement('hr');
+        const div1 = document.createElement('div');
+        const div2 = document.createElement('div');
+        const img = document.createElement('img');
+        const email = document.createElement('p');
+        const phone = document.createElement('p');
+        const url = document.createElement('a');
 
+        img.setAttribute('src', `${item.image}`);
+        img.classList.add(`business-${item.id}`);
+        img.setAttribute('alt', `${item.description}`);
+
+        const emailContent = document.createTextNode(`${item.email}`);
+        email.appendChild(emailContent);
+
+        const phoneContent = document.createTextNode(`${item.phone}`);
+        phone.appendChild(phoneContent);
+
+        const urlContent = document.createTextNode(`${item.website}`);
+        url.setAttribute('href', `${item.website}`);
+        url.appendChild(urlContent);
+        
+        div1.classList.add('card-top');
+        div1.appendChild(h1);
+        div1.appendChild(h5);
+        div1.appendChild(hr);
+        
+        div2.classList.add('card-bottom');
+        div2.appendChild(img);
+        div2.appendChild(email);
+        div2.appendChild(phone);
+        div2.appendChild(url);
+
+        homeCards.appendChild(div1);
+        homeCards.appendChild(div2);
+
+        card.appendChild(homeCards);
+      });
+    }
+  });
+}
 function drawLists() {
   const card = document.getElementById('directory-content');
   card.innerHTML = '';

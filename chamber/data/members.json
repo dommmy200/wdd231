@@ -6,6 +6,7 @@
         "alternate": "Bright King",
         "description": "This is the 1st directory.",
         "phone": "123-456-7890",
+        "email": "info@brightking.org",
         "website": "https://example.com/dir1"
     },
     {
@@ -15,6 +16,7 @@
         "alternate": "Byte Boom",
         "description": "This is the 2nd directory.",
         "phone": "123-456-7891",
+        "email": "info@bytebloom.org",
         "website": "https://example.com/dir2"
     },
     {
@@ -24,6 +26,7 @@
         "alternate": "Code Nest",
         "description": "This is the 3rd directory.",
         "phone": "123-456-7892",
+        "email": "info@codenest.org",
         "website": "https://example.com/dir3"
     },
     {
@@ -33,6 +36,7 @@
         "alternate": "Echo Thread",
         "description": "This is the 4th directory.",
         "phone": "123-456-7893",
+        "email": "info@echothread.org",
         "website": "https://example.com/dir4"
     },
     {
@@ -42,6 +46,7 @@
         "alternate": "Echo Vale Lab",
         "description": "This is the 5th directory.",
         "phone": "123-456-7894",
+        "email": "info@echovalelab.org",
         "website": "https://example.com/dir5"
     },
     {
@@ -51,6 +56,7 @@
         "alternate": "Fablehaus",
         "description": "This is the 6th directory.",
         "phone": "123-456-7895",
+        "email": "info@fablehaus.org",
         "website": "https://example.com/dir6"
     },
     {
@@ -60,6 +66,7 @@
         "alternate": "Horizontal Bridge",
         "description": "This is the 7th directory.",
         "phone": "123-456-7896",
+        "email": "info@horizonbridge.org",
         "website": "https://example.com/dir7"
     },
     {
@@ -69,6 +76,7 @@
         "alternate": "Inkwell & Iron",
         "description": "This is the 8th directory.",
         "phone": "123-456-7897",
+        "email": "info@inkwelliron.org",
         "website": "https://example.com/dir8"
     },
     {
@@ -78,6 +86,7 @@
         "alternate": "Kindra Works",
         "description": "This is the 9th directory.",
         "phone": "123-456-7898",
+        "email": "info@kindraworks.org",
         "website": "https://example.com/dir9"
     },
     {
@@ -87,6 +96,7 @@
         "alternate": "Looplytics",
         "description": "This is the 10th directory.",
         "phone": "123-456-7891",
+        "email": "info@looplytics.org",
         "website": "https://example.com/dir2"
     },
     {
@@ -96,6 +106,7 @@
         "alternate": "Vireo Circle",
         "description": "This is the 11th directory.",
         "phone": "123-456-7899",
+        "email": "info@vireocircle.org",
         "website": "https://example.com/dir11"
     },
     {
@@ -105,6 +116,7 @@
         "alternate": "Lumen Roots",
         "description": "This is the 12th directory.",
         "phone": "123-456-7900",
+        "email": "info@lumenroots.org",
         "website": "https://example.com/dir12"
     },
     {
@@ -114,6 +126,7 @@
         "alternate": "Modecraft Collective",
         "description": "This is the 13th directory.",
         "phone": "123-456-7901",
+        "email": "info@modecraft.org",
         "website": "https://example.com/dir13"
     },
     {
@@ -123,6 +136,7 @@
         "alternate": "NimbusCore",
         "description": "This is the 14th directory.",
         "phone": "123-456-7902",
+        "email": "info@nimbuscore.org",
         "website": "https://example.com/dir14"
     },
     {
@@ -132,6 +146,7 @@
         "alternate": "NorthAxis Group",
         "description": "This is the 15th directory.",
         "phone": "123-456-7903",
+        "email": "info@northaxis.org",
         "website": "https://example.com/dir15"
     },
     {
@@ -141,6 +156,7 @@
         "alternate": "Pivota Strategies",
         "description": "This is the 16th directory.",
         "phone": "123-456-7904",
+        "email": "info@pivota.org",
         "website": "https://example.com/dir16"
     },
     {
@@ -150,6 +166,7 @@
         "alternate": "PixelLoom Studio",
         "description": "This is the 17th directory.",
         "phone": "123-456-7905",
+        "email": "info@pixelloom.org",
         "website": "https://example.com/dir17"
     },
     {
@@ -159,6 +176,7 @@
         "alternate": "Slate & Ember",
         "description": "This is the 18th directory.",
         "phone": "123-456-7906",
+        "email": "info@slateember.org",
         "website": "https://example.com/dir18"
     },
     {
@@ -168,6 +186,7 @@
         "alternate": "Swiftforge",
         "description": "This is the 19th directory.",
         "phone": "123-456-7907",
+        "email": "info@swiftforge.org",
         "website": "https://example.com/dir19"
     },
     {
@@ -177,6 +196,7 @@
         "alternate": "TerraPulse",
         "description": "This is the 20th directory.",
         "phone": "123-456-7908",
+        "email": "info@terrapulse.org",
         "website": "https://example.com/dir20"
     }
 ]

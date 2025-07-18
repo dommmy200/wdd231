@@ -9,6 +9,71 @@
     body {
         min-height: 100vh; /* 100% of the viewport height */
     }
+    /****************************** Style Index Header *********************************/
+.header-index{
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-areas:
+    "left left left left left center center center center center right";
+    background-color: #a14444;
+    padding: 0px;
+    gap: 0px;
+    align-items:normal;
+}
+.div-index {
+    grid-area: left;
+
+    display: flex;
+    background-color: #923333;
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+    border-radius: 0px;
+}
+.nav-index {
+    grid-area: center;
+}
+.div-index h1 {
+    font-size: large;
+    text-align: center;
+    padding: 8px;
+    margin: 3px;
+}
+.div-index img {
+    width: 40px;
+    height: 40px;
+}
+.ulist-index{
+    background-color: #923333;
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.list-index {
+    display: block;
+    width: 100%;
+    flex: 1 1 100%;
+    padding: 15px;
+    text-align: center;
+}
+.a-link {
+    font-size: larger;
+}
+.dark-mode {
+    grid-area: right;
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: #923333;
+    margin: 0px;
+    border-radius: 0px;
+    padding: 0px;
+}
     /****************************** Style Header *********************************/
     .dir-logo {
         width: 24px;
@@ -65,8 +130,8 @@
     }
 
     /********************************* Footer Styling ********************************/
-    .dir-footer {
+    /* .dir-footer {
         font-size: x-large;
         height: 100px;
-    }
+    } */
 }

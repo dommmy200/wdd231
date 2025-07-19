@@ -216,20 +216,21 @@ header div {
 }
 /****************************** Style Homepage Card *********************************/
 .home-cards {
-    display: flex;
-    flex-direction: row;
-    width: 71%;
+    display: block;
+    /* flex-direction: column; */
+    text-align: center;
+    width: 90%;
     margin: 5px auto;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 .three-cards {
     display: flex;
     flex-direction: column;
     background-color: #cbcaca;
-    width: 33%;
-    height: 200px;
+    width:100%;
+    height: auto;
     border: #000000 solid 1px;
-    border-radius: 7px 7px 0 0;
+    border-radius: 7px;
     margin: 5px;
 }
 main h1 {
@@ -251,7 +252,8 @@ main h1 {
     grid-area: before;
 
     display: block;
-    margin: 15px;
+    width: 70%;
+    margin: 5px;
     border-radius: 4px;
     box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.4);
 }
@@ -260,6 +262,7 @@ main h1 {
     width: 100%;
     text-align: left;
     padding: 5px;
+    font-size: larger;
     /* background-color: #923333; */
 }
 /****************************** Style Main *********************************/
@@ -443,32 +446,35 @@ input:checked + .slider-m::before {
 } */
 .footer {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: auto;
-    height: 200px;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, 1fr);
+    height: fit-content;
     background-color: #923333;
+    text-align: center;
 }
 .address {
     font-size: large;
     display: flex;
     flex-direction: column;
-    text-align: left;
+    /* text-align: left; */
     padding: 10px;
     color: #ffffff;
 
 }
 .index {
-    display: flex;
-    flex-direction: row;
+    display: block;
+    /* flex-direction: row; */
     width: 100%;
-    /* align-items: right; */
+    height: 60%;
+    align-items: center;
     /* background-color: bisque; */
-    margin: 10px;
-    padding: 15px;
+    /* margin: 10px auto; */
+    padding: 10px;
 }
 .footer-right {
     display: flex;
     flex-direction: column;
+    height: fit-content;
     padding: 10px;
     color: #ffffff;
 }

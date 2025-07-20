@@ -1,4 +1,4 @@
-[
+[   
     {
         "id": "dir-1",
         "name": "Bright King",
@@ -7,7 +7,13 @@
         "description": "This is the 1st directory.",
         "phone": "123-456-7890",
         "email": "info@brightking.org",
-        "website": "https://example.com/dir1"
+        "website": "https://example.com/dir1",
+        "membership": {
+            "type": "silver",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"742 Pinecrest Drive, Oakridge, Westford County"
     },
     {
         "id": "dir-2",
@@ -17,7 +23,13 @@
         "description": "This is the 2nd directory.",
         "phone": "123-456-7891",
         "email": "info@bytebloom.org",
-        "website": "https://example.com/dir2"
+        "website": "https://example.com/dir2",
+        "membership": {
+            "type": "gold",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"11 Meadowbrook Lane, Fairview, Kingsley County"
     },
     {
         "id": "dir-3",
@@ -27,7 +39,13 @@
         "description": "This is the 3rd directory.",
         "phone": "123-456-7892",
         "email": "info@codenest.org",
-        "website": "https://example.com/dir3"
+        "website": "https://example.com/dir3",
+        "membership": {
+            "type": "standard",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"108 Silver Birch Road, Brookfield, Daleshire County"
     },
     {
         "id": "dir-4",
@@ -37,7 +55,13 @@
         "description": "This is the 4th directory.",
         "phone": "123-456-7893",
         "email": "info@echothread.org",
-        "website": "https://example.com/dir4"
+        "website": "https://example.com/dir4",
+        "membership": {
+            "type": "silver",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"56 Willow Grove Avenue, Lakeside, Norham County"
     },
     {
         "id": "dir-5",
@@ -47,7 +71,13 @@
         "description": "This is the 5th directory.",
         "phone": "123-456-7894",
         "email": "info@echovalelab.org",
-        "website": "https://example.com/dir5"
+        "website": "https://example.com/dir5",
+        "membership": {
+            "type": "silver",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"7223 Highland Trail, Riverton, Grantham County"
     },
     {
         "id": "dir-6",
@@ -57,7 +87,13 @@
         "description": "This is the 6th directory.",
         "phone": "123-456-7895",
         "email": "info@fablehaus.org",
-        "website": "https://example.com/dir6"
+        "website": "https://example.com/dir6",
+        "membership": {
+            "type": "gold",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"37 Maple Hollow Court, Elmdale, Warwick County"
     },
     {
         "id": "dir-7",
@@ -67,7 +103,13 @@
         "description": "This is the 7th directory.",
         "phone": "123-456-7896",
         "email": "info@horizonbridge.org",
-        "website": "https://example.com/dir7"
+        "website": "https://example.com/dir7",
+        "membership": {
+            "type": "silver",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"981 Chestnut Street, Hilltop, Foxmoor County"
     },
     {
         "id": "dir-8",
@@ -77,7 +119,13 @@
         "description": "This is the 8th directory.",
         "phone": "123-456-7897",
         "email": "info@inkwelliron.org",
-        "website": "https://example.com/dir8"
+        "website": "https://example.com/dir8",
+        "membership": {
+            "type": "standard",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"144 Redwood Crescent, Springdale, Eastmere County"
     },
     {
         "id": "dir-9",
@@ -87,7 +135,13 @@
         "description": "This is the 9th directory.",
         "phone": "123-456-7898",
         "email": "info@kindraworks.org",
-        "website": "https://example.com/dir9"
+        "website": "https://example.com/dir9",
+        "membership": {
+            "type": "gold",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"65 Sycamore Way, Glenhaven, Brightwell County"
     },
     {
         "id": "dir-10",
@@ -97,7 +151,13 @@
         "description": "This is the 10th directory.",
         "phone": "123-456-7891",
         "email": "info@looplytics.org",
-        "website": "https://example.com/dir2"
+        "website": "https://example.com/dir2",
+        "membership": {
+            "type": "gold",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"319 Oakshade Boulevard, Newbridge, Ainsley County"
     },
     {
         "id": "dir-11",
@@ -107,7 +167,13 @@
         "description": "This is the 11th directory.",
         "phone": "123-456-7899",
         "email": "info@vireocircle.org",
-        "website": "https://example.com/dir11"
+        "website": "https://example.com/dir11",
+        "membership": {
+            "type": "gold",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"87 Dogwood Lane, Rosehill, Tyneshire County"
     },
     {
         "id": "dir-12",
@@ -117,7 +183,13 @@
         "description": "This is the 12th directory.",
         "phone": "123-456-7900",
         "email": "info@lumenroots.org",
-        "website": "https://example.com/dir12"
+        "website": "https://example.com/dir12",
+        "membership": {
+            "type": "standard",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"152 Cedar Row, Northvale, Winford County"
     },
     {
         "id": "dir-13",
@@ -127,7 +199,13 @@
         "description": "This is the 13th directory.",
         "phone": "123-456-7901",
         "email": "info@modecraft.org",
-        "website": "https://example.com/dir13"
+        "website": "https://example.com/dir13",
+        "membership": {
+            "type": "gold",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"76 Poplar Crescent, Greenfield, Harbridge County"
     },
     {
         "id": "dir-14",
@@ -137,7 +215,13 @@
         "description": "This is the 14th directory.",
         "phone": "123-456-7902",
         "email": "info@nimbuscore.org",
-        "website": "https://example.com/dir14"
+        "website": "https://example.com/dir14",
+        "membership": {
+            "type": "silver",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"329 Alderstone Avenue, Ashbury, Dunsley County"
     },
     {
         "id": "dir-15",
@@ -147,7 +231,13 @@
         "description": "This is the 15th directory.",
         "phone": "123-456-7903",
         "email": "info@northaxis.org",
-        "website": "https://example.com/dir15"
+        "website": "https://example.com/dir15",
+        "membership": {
+            "type": "gold",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"102 Elm Street, Sunnyside, Marlowe County"
     },
     {
         "id": "dir-16",
@@ -157,7 +247,13 @@
         "description": "This is the 16th directory.",
         "phone": "123-456-7904",
         "email": "info@pivota.org",
-        "website": "https://example.com/dir16"
+        "website": "https://example.com/dir16",
+        "membership": {
+            "type": "gold",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"8 Spruce Haven Way, Eastbourne, Netherdale County"
     },
     {
         "id": "dir-17",
@@ -167,7 +263,13 @@
         "description": "This is the 17th directory.",
         "phone": "123-456-7905",
         "email": "info@pixelloom.org",
-        "website": "https://example.com/dir17"
+        "website": "https://example.com/dir17",
+        "membership": {
+            "type": "silver",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"199 Hemlock Drive, Clearbrook, Hawking County"
     },
     {
         "id": "dir-18",
@@ -177,7 +279,13 @@
         "description": "This is the 18th directory.",
         "phone": "123-456-7906",
         "email": "info@slateember.org",
-        "website": "https://example.com/dir18"
+        "website": "https://example.com/dir18",
+        "membership": {
+            "type": "gold",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"590 Juniper Hill Lane, Windale, Hartsford County"
     },
     {
         "id": "dir-19",
@@ -187,7 +295,13 @@
         "description": "This is the 19th directory.",
         "phone": "123-456-7907",
         "email": "info@swiftforge.org",
-        "website": "https://example.com/dir19"
+        "website": "https://example.com/dir19",
+        "membership": {
+            "type": "gold",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"218 Birchbend Terrace, Meadowfield, Claremont County"
     },
     {
         "id": "dir-20",
@@ -197,6 +311,12 @@
         "description": "This is the 20th directory.",
         "phone": "123-456-7908",
         "email": "info@terrapulse.org",
-        "website": "https://example.com/dir20"
+        "website": "https://example.com/dir20",
+        "membership": {
+            "type": "gold",
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01"
+        },
+        "address":"403 Aspen Ridge Road, Stoneford, Larkspur County"
     }
 ]

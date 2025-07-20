@@ -1,6 +1,6 @@
 import { displayHomePageCards, modeSwitching } from "./utilities.mjs";
 import { insertTextAndModifiedDate } from "./dates.mjs";
-import { updatePage } from "./weather.mjs";
+import { updateCurrentWeather, updateForecastWeather } from "./weather.mjs";
 
 // insertDateNameAndIcon();
 insertTextAndModifiedDate();
@@ -8,4 +8,5 @@ insertTextAndModifiedDate();
 // toggleSwitching();
 modeSwitching();
 displayHomePageCards();
-updatePage();
+updateCurrentWeather();
+updateForecastWeather();

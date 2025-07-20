@@ -17,8 +17,15 @@ function selectCardContainer(identity) {
   card.innerHTML = '';
   return card;
 }
+function getRandomThree(arr) {
+  const shuffled = [...arr].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, 3);
+}
 function drawHomepageCard(card, data) {
-  const threeObjects = data.filter((_, i) => i < 3);
+  const nonStdMembers = data.filter(item => item.membership.type === 'gold' || item.membership.type === 'silver');
+  console.log(nonStdMembers);
+  const threeObjects = getRandomThree(nonStdMembers);
+  console.log(threeObjects);
   threeObjects.forEach(item => {
     const homeCards = document.createElement('div');
     homeCards.classList.add('three-cards');
@@ -30,7 +37,8 @@ function drawHomepageCard(card, data) {
     const div2 = document.createElement('div');
     const div2Right = document.createElement('div');
     const img = document.createElement('img');
-    const email = document.createElement('p');
+    const address = document.createElement('p');
+    const membership = document.createElement('p');
     const phone = document.createElement('p');
     const url = document.createElement('a');
 
@@ -49,8 +57,20 @@ function drawHomepageCard(card, data) {
     img.setAttribute('alt', `${item.description}`);
     img.setAttribute('width', '100');
 
-    const emailContent = document.createTextNode(`${item.email}`);
-    email.appendChild(emailContent);
+    const addressContent = document.createTextNode(`${item.address}`);
+    address.appendChild(addressContent);
+
+    const membershipContent = document.createTextNode(`${item.membership.type}`); 
+    membership.style.textTransform = 'capitalize';
+    membership.style.fontWeight = 'bold';
+    membership.style.backgroundColor = item.membership.type === 'gold' ? '#ffffffff' : '#020202ff';
+    membership.style.color = item.membership.type === 'gold' ? 'black' : 'white';
+    membership.style.fontSize = '1.2em';
+    membership.style.padding = '10px';
+    membership.style.fontFamily = 'Arial, sans-serif';
+    membership.style.borderRadius = '5px';
+    membership.style.width = 'fit-content';
+    membership.appendChild(membershipContent);
 
     const phoneContent = document.createTextNode(`${item.phone}`);
     phone.appendChild(phoneContent);
@@ -68,9 +88,10 @@ function drawHomepageCard(card, data) {
 
     div2.classList.add('card-bottom');
     div2.appendChild(img);
-    div2Right.appendChild(email);
+    div2Right.appendChild(address);
     div2Right.appendChild(phone);
     div2Right.appendChild(url);
+    div2Right.appendChild(membership);
     div2.appendChild(div2Right)
 
     homeCards.appendChild(div1);
@@ -84,7 +105,6 @@ function drawCards() {
   const card = selectCardContainer(directoryCard);
   readCardFile().then(data => {
       data.forEach(item => {
-      // console.log(item); // Optional: log the item
       const div = document.createElement('div');
       div.classList.add('biz-card');
       const h2 = document.createElement('h2');
@@ -199,46 +219,3 @@ export function modeSwitching() {
         }
     });
 }
-// const homeCards = document.createElement('div');
-//       homeCards.classList.add('three-cards');
-//       data.forEach(item => {
-//         const h1 = document.createElement('h1');
-//         const h5 = document.createElement('h5');
-//         const hr = document.createElement('hr');
-//         const div1 = document.createElement('div');
-//         const div2 = document.createElement('div');
-//         const img = document.createElement('img');
-//         const email = document.createElement('p');
-//         const phone = document.createElement('p');
-//         const url = document.createElement('a');
-
-//         img.setAttribute('src', `${item.image}`);
-//         img.classList.add(`business-${item.id}`);
-//         img.setAttribute('alt', `${item.description}`);
-
-//         const emailContent = document.createTextNode(`${item.email}`);
-//         email.appendChild(emailContent);
-
-//         const phoneContent = document.createTextNode(`${item.phone}`);
-//         phone.appendChild(phoneContent);
-
-//         const urlContent = document.createTextNode(`${item.website}`);
-//         url.setAttribute('href', `${item.website}`);
-//         url.appendChild(urlContent);
-        
-//         div1.classList.add('card-top');
-//         div1.appendChild(h1);
-//         div1.appendChild(h5);
-//         div1.appendChild(hr);
-        
-//         div2.classList.add('card-bottom');
-//         div2.appendChild(img);
-//         div2.appendChild(email);
-//         div2.appendChild(phone);
-//         div2.appendChild(url);
-
-//         homeCards.appendChild(div1);
-//         homeCards.appendChild(div2);
-
-//         card.appendChild(homeCards);
-//       });

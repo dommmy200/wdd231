@@ -121,14 +121,91 @@ function main() {
             if (btn.id === 'all') {
                 let courses = getCourses();
                 createOutputHTML(courses);
+                displayDialog(courses);
             } else if (btn.id === 'cse') {
                 let courses = getCourses().filter(course => course.subject === 'CSE');
                 createOutputHTML(courses);
+                displayDialog(courses);
             } else if (btn.id === 'wdd') {
                 let courses = getCourses().filter(course => course.subject === 'WDD');
                 createOutputHTML(courses);
+                displayDialog(courses);
             }
         })
+    });
+}
+function displayCourseDetails(course) {
+    const courseDetails = document.querySelector('#course-details');
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+        <button id="close-modal">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+    // const openModal = document.querySelector(".open-button");
+    const closeModal = document.querySelector("#close-modal");
+    courseDetails.showModal();
+  
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+}
+function displayDialog(courses) {
+    let selectedArray = document.querySelectorAll('.course-card');
+    selectedArray.forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => {
+            let courseText = card.textContent.trim();
+            if (courseText.includes('111')) {
+                let course = courses.find(c => c.subject === 'CSE' && c.number === 111);
+                if (!course) {
+                    console.error('Course not found');
+                    return;
+                }
+                displayCourseDetails(course);
+            } else if (courseText.includes('210')) {
+                let course = courses.find(c => c.subject === 'CSE' && c.number === 210);
+                if (!course) {
+                    console.error('Course not found');
+                    return;
+                }
+                displayCourseDetails(course);
+            } else if (courseText.includes('110')) {
+                let course = courses.find(c => c.subject === 'CSE' && c.number === 110);
+                if (!course) {
+                    console.error('Course not found');
+                    return;
+                }
+                displayCourseDetails(course);
+            } else if (courseText.includes('130')) {
+                let course = courses.find(c => c.subject === 'WDD' && c.number === 130);
+                if (!course) {
+                    console.error('Course not found');
+                    return;
+                }
+                displayCourseDetails(course);
+            } else if (courseText.includes('131')) {
+                let course = courses.find(c => c.subject === 'WDD' && c.number === 131);
+                if (!course) {
+                    console.error('Course not found');
+                    return;
+                }
+                displayCourseDetails(course);
+            } else if (courseText.includes('231')) {
+                let course = courses.find(c => c.subject === 'WDD' && c.number === 231);
+                if (!course) {
+                    console.error('Course not found');
+                    return;
+                }
+                displayCourseDetails(course);
+            } else {
+                console.error('Course not found for the selected card');
+            }
+        });
     });
 }
 // Initialize the script

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "np",
+    "title": "Non-Profit",
+    "description": "Ideal for charitable or community-based organizations. Enjoy limited access to events and networking opportunities at discounted rates.",
+    "icon": "🤝"
+  },
+  {
+    "id": "gold",
+    "title": "Gold",
+    "description": "Our premium membership level with maximum visibility, promotional support, and VIP access to all events and initiatives.",
+    "icon": "🥇"
+  },
+  {
+    "id": "silver",
+    "title": "Silver",
+    "description": "Provides enhanced visibility and participation benefits in chamber activities, including priority event invitations.",
+    "icon": "🥈"
+  },
+  {
+    "id": "bronze",
+    "title": "Bronze",
+    "description": "Basic membership tier offering standard benefits such as directory listing and entry to general events.",
+    "icon": "🥉"
+  }
+]

@@ -12,42 +12,74 @@
     <meta property="og:description" content="Ugbokolo Chamber of Commerce">
     <meta property="og:image" content="./images/wdd231-pix.webp">
     <meta property="og:url" content="https://dommmy200.github.io/wdd231/">
+    <title>Ugbokolo Chamber of Commerce - Join</title>
     <link rel="stylesheet" href="../chamber/styles/normalize.css">
     <link rel="stylesheet" href="../chamber/styles/smaller.css">
     <link rel="stylesheet" href="../chamber/styles/larger.css">
     <link rel="icon" href="../chamber/images/favicon-chamb.ico" type="image/x-icon" sizes="16x16 32x32 48x48" id="favicon">
-    <script type="module" src="../chamber/scripts/chamber.js"></script>
-    <!-- <script type="module" src="../chamber/scripts/utilities.mjs"></script> -->
-    <!-- <script src="../chamber/scripts/navigation.js" defer></script> -->
-    <!-- <script src="./scripts/dates.js" defer></script> -->
-    <title>Ugbokolo Chamber of Commerce</title>
+    <script type="module" src="../chamber/scripts/join.js"></script>
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="join-header">
             <div><img class="dir-logo" src="../chamber/images/chmb-logo2.webp" alt="Chamber Logo" width="50" height="50"></div>
-            <h1>Ugbokolo Chamber of Commerce</h1>
+            <h2>Ugbokolo Chamber of Commerce</h2>
         </header>
         <nav id="nav" class="navigation">
             <ul class="nav-ulist">
-                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#directory.html" class="nav-link">Chamber</a></li>
+                <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="./directory.html" class="nav-link">Directory</a></li>
                 <li class="nav-item"><a href="../final/project.html" class="nav-link">Final</a></li>
                 <!-- <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li> -->
             </ul>
         </nav>
     </div>
-    <main>
-        <h2>Directory</h2>
-        <p class="welcome">Welcome to the Ugbokolo Chamber of Commerce directory. Here you can find a list of our members and their contact information.</p>
-        <div class="btn-container">
-            <label class="switch">
-                <input title="toggle-switch" type="checkbox" id="toggle-switch">
-                <span class="slider round"></span>
-            </label>
-        </div>
-        <!-- Directory content will be dynamically loaded here -->
-        <div id="directory-content"></div>
+    <main class="join-main">
+        <section class="join-section">
+            <h2>Membership Form</h2>
+            <form method="get" action="./thankyou.html" id="join-form" class="join-form">
+                <fieldset class="personal">
+                    <legend>Personal Information*</legend>
+                    <p>Fill in your personal information to join the chamber.</p>
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="Enter your First Name" required /><br /><br />
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" placeholder="Enter your Last Name" required /><br /><br />
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required /><br /><br />
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required /><br /><br />
+                </fieldset>
+                <fieldset class="fieldset">
+                    <legend>Organisation/Business:</legend>
+                    <label for="organisation">Organisation*</label>
+                    <!-- <select name="city" id="city" placeholder="Enter Desired City" required >Select A City</select><br /><br /> -->
+                    <input type="text" id="organisation" placeholder="Enter Business/Organisation Name" required >
+                    <label for="organisation-title">Business Title:</label>
+                    <input type="text" id="organisation-title" placeholder="Enter Business/Organisation Title" required >
+                    <label for="organisation">Organisational Title</label>
+                    <textarea name="textarea" id="biz-description" rows="4" cols="38" title="Description here" placeholder="Enter Business/Organisation Description"></textarea>
+                    <label for="biz-description">Organisation Description</label>
+                </fieldset>
+                <fieldset class="membership">
+                    <legend>Membership*</legend>
+                    <input type="radio" id="non-profit" class="membership" name="membership" value="4" required>
+                    <label for="non-profit" title="Non Profit">Non Profit</label>
+                    <input type="radio" id="gold" class="membership" name="membership" value="3" required>
+                    <label for="gold" title="Gold">Gold</label>
+                    <input type="radio" id="silver" class="membership" name="membership" value="2" required>
+                    <label for="silver" title="Silver">Silver</label>
+                    <input type="radio" id="bronze" class="membership" name="membership" value="1" required>
+                    <label for="bronze" title="Bronze">Bronze</label>
+                </fieldset>
+                <button class="submit" type="submit">Join The Chamber</button>
+            </form>
+        </section>
+        <section id="membership-benefits" class="benefits-section">
+            <h2>Membership Status</h2>
+            <ul id="benefits-list" class="benefits-list"></ul>
+            <dialog id="benefits-dialog" class="benefits-dialog"></dialog>
+        </section>
     </main>
     <!-- <footer class="dir-footer">
         <p>&copy; 2023 Ugbokolo Chamber of Commerce. All rights reserved.</p>

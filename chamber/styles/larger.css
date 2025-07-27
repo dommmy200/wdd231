@@ -15,7 +15,7 @@
     grid-template-columns: repeat(11, 1fr);
     grid-template-areas:
     "left left left left left center center center center center right";
-    background-color: #a14444;
+    background-color: #003366;
     padding: 0px;
     gap: 0px;
     align-items:normal;
@@ -24,7 +24,7 @@
     grid-area: left;
 
     display: flex;
-    background-color: #923333;
+    background-color: #003366;
     width: 100%;
     padding: 5px;
     margin: 0;
@@ -44,7 +44,7 @@
     height: 40px;
 }
 .ulist-index{
-    background-color: #923333;
+    background-color: #003366;
     display: flex;
     flex-direction:row;
     width: 100%;
@@ -69,7 +69,7 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
-    background-color: #923333;
+    background-color: #003366;
     margin: 0px;
     border-radius: 0px;
     padding: 0px;
@@ -213,4 +213,14 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
     }
+    /********************************* Join Page ********************************/
+    .join-main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    
 }

@@ -22,7 +22,7 @@ function getModifiedDate() {
     return new Date(document.lastModified).toLocaleDateString("en-US", options);
 }
 export function insertTextAndModifiedDate() {
-    const dateContainer = document.getElementById("lastModified");
+    const dateContainer = document.getElementById("last-modified");
 
     // Create a text node with Last Modified Date
     const lastModifiedDate = document.createTextNode("Last Modified: ");

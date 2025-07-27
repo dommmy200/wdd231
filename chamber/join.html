@@ -46,17 +46,16 @@
                     <label for="lname">Last Name:</label>
                     <input type="text" id="lname" name="lname" placeholder="Enter your Last Name" autocomplete="family-name" required /><br /><br />
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required /><br /><br />
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" autocomplete="email" required /><br /><br />
                     <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required /><br /><br />
+                    <input type="tel" id="phone" name="phone" placeholder="(012)3456789" autocomplete="tel" required /><br /><br />
                 </fieldset>
                 <fieldset class="fieldset">
                     <legend>Organisation/Business:</legend>
                     <label for="organisation">Organisation*</label>
-                    <!-- <select name="city" id="city" placeholder="Enter Desired City" required >Select A City</select><br /><br />   -->
-                    <input type="text" id="organisation" placeholder="Enter Business/Organisation Name" required >
+                    <input type="text" id="organisation" placeholder="Enter Business/Organisation Name" autocomplete="organization" required >
                     <label for="organisation-title">Business Title:</label>
-                    <input type="text" id="organisation-title" pattern="[A-Za-z\- ]{7,}" placeholder="Allowed characters: Minimum 7 letters, hyphon and space" required >
+                    <input type="text" id="organisation-title" pattern="[A-Za-z\- ]{7,}" placeholder="Allowed characters: Minimum 7 letters, hyphon and space" autocomplete="organization-title" required >
                     <label for="organisation">Organisational Title</label>
                     <textarea name="textarea" id="biz-description" rows="4" cols="38" title="Description here" placeholder="Enter Business/Organisation Description"></textarea>
                     <label for="biz-description">Organisation Description</label>

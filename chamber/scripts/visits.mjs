@@ -16,7 +16,6 @@ async function getStatusBenefits() {
 function getDOM() {
   return document.querySelector("#benefits-list");
 }
-console.log(getDOM());
 export function displayThankYou() {
   const params = new URLSearchParams(window.location.search);
   
@@ -86,7 +85,6 @@ export async function displayMembershipBenefits() {
   const benefits = await getStatusBenefits();
   benefits.forEach((membership) => {
     const benefitsContainer = getDOM();
-    console.log(benefitsContainer);
     const li = document.createElement("li");
     li.classList.add("benefit-item");
     li.id = membership.id;
@@ -98,3 +96,18 @@ export async function displayMembershipBenefits() {
     benefitsContainer.appendChild(li);
   });
 }
+// export function regexHandler() {
+//   const organisationTitle = document.getElementById("organisation-title");
+//   const error = document.getElementById("error");
+//   // console.log(error);
+//   // error.style.color = 'red';
+//   const regex = /^[A-Za-z\- ]$/; // Regex to allow letters, dash, and space
+//   organisationTitle.addEventListener("input", () => {
+//   const value = organisationTitle.value;
+//   if (!regex.test(value)) {
+//     error.textContent = "Only letters, hyphens, and spaces allowed; must be at least 7 characters.";
+//   } else {
+//     error.textContent = "";
+//   }
+// });
+// }

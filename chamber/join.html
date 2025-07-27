@@ -42,9 +42,9 @@
                     <legend>Personal Information*</legend>
                     <p>Fill in your personal information to join the chamber.</p>
                     <label for="fname">First Name:</label>
-                    <input type="text" id="fname" name="fname" placeholder="Enter your First Name" required /><br /><br />
+                    <input type="text" id="fname" name="fname" placeholder="Enter your First Name" autocomplete="given-name" required /><br /><br />
                     <label for="lname">Last Name:</label>
-                    <input type="text" id="lname" name="lname" placeholder="Enter your Last Name" required /><br /><br />
+                    <input type="text" id="lname" name="lname" placeholder="Enter your Last Name" autocomplete="family-name" required /><br /><br />
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required /><br /><br />
                     <label for="phone">Phone:</label>
@@ -53,10 +53,10 @@
                 <fieldset class="fieldset">
                     <legend>Organisation/Business:</legend>
                     <label for="organisation">Organisation*</label>
-                    <!-- <select name="city" id="city" placeholder="Enter Desired City" required >Select A City</select><br /><br /> -->
+                    <!-- <select name="city" id="city" placeholder="Enter Desired City" required >Select A City</select><br /><br />   -->
                     <input type="text" id="organisation" placeholder="Enter Business/Organisation Name" required >
                     <label for="organisation-title">Business Title:</label>
-                    <input type="text" id="organisation-title" placeholder="Enter Business/Organisation Title" required >
+                    <input type="text" id="organisation-title" pattern="[A-Za-z\- ]{7,}" placeholder="Allowed characters: Minimum 7 letters, hyphon and space" required >
                     <label for="organisation">Organisational Title</label>
                     <textarea name="textarea" id="biz-description" rows="4" cols="38" title="Description here" placeholder="Enter Business/Organisation Description"></textarea>
                     <label for="biz-description">Organisation Description</label>
@@ -73,6 +73,7 @@
                     <label for="bronze" title="Bronze">Bronze</label>
                 </fieldset>
                 <button class="submit" type="submit">Join The Chamber</button>
+                <p id="error"></p>
             </form>
         </section>
         <section id="membership-benefits" class="benefits-section">

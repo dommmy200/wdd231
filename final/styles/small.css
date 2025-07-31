@@ -1,0 +1,260 @@
+/*********************** Colors And Typography ******************************/
+:root {
+  --color-primary: #2C3E50;    /* deep blue */
+  --color-secondary: #ECF0F1;  /* light grey */
+  --color-accent: #E67E22;     /* burnt orange accent */
+  --text-on-primary: #FFFFFF;
+  --text-on-secondary: #2C3E50;
+  --black: #000000;
+  --white: #FFFFFF;
+  --queen-blue: #396e94; /* a shade of blue */
+  --safety-orange: #FF6700; /* a shade of orange */
+  --gray-92: #EBEBEB; /* a light gray */
+  --usafa-blue: #004E98; /* a shade of blue */
+
+  /* Base font & scale */
+  --base-font-size: 16px;
+  --scale-ratio: 1.333;
+
+  /* Fluid typography for headings */
+  --h1: clamp(2.5rem, calc(var(--base-font-size) * var(--scale-ratio) * 3), 4rem);
+  --h2: clamp(2rem, calc(var(--h1) / var(--scale-ratio)), 3.5rem);
+  --h3: clamp(1.6rem, calc(var(--h2) / var(--scale-ratio)), 2.5rem);
+  --p: clamp(1rem, 1rem, 1.2rem);
+
+  /* Font weights */
+  --font-regular: 400;
+  --font-bold: 700;
+
+  /* Line heights for vertical rhythm */
+  --line-height-body: 1.5;
+  --line-height-heading: 1.25;
+
+  /* Font family fallback stack */
+  /* --font-body: 'Roboto', Arial, sans-serif;
+  --font-heading: 'Roboto Slab', serif; */
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Source Sans Pro', sans-serif;
+}
+.typography {
+    background-color: var(--color-secondary);
+    font-family: var(--font-body);
+    font-size: var(--base-font-size);
+    line-height: var(--line-height-body);
+    color: var(--color-primary);
+}
+/*********************** Header Styling ******************************/
+header {
+    background-color:var(--color-primary);
+    color: var(--text-on-primary);
+    padding: 10px;
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+}
+header p {
+    font-size: 1em;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+header img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+/*********************** Footer Styling ******************************/
+footer {
+    background-color: coral;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/*********************** Navigation Section Styling ******************************/
+/*********************** Site Plan ******************************/
+.site-plan {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+.site-plan h2 {
+    color: #333;
+}
+.site-plan h3 {
+    color: #555;
+}
+.site-plan p {
+    color: #666;
+    line-height: 1.6;
+}
+.site-plan img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+.site-plan table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.site-plan th, .site-plan td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.site-plan th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+.site-plan .colors {
+    display: flex;
+    justify-content: space-between;
+}
+.site-plan .colors th {
+    width: 25%;
+    text-align: center;
+}
+.site-plan .colors td {
+    width: 25%;
+    text-align: center;
+}
+.site-plan .colors div {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+.site-plan .colors .primary {
+    color: #000000;
+    background-color: #EBEBEB;
+}
+.site-plan .colors .secondary {
+    color: #FFFFFF;
+    background-color: #004E98;
+}
+.site-plan .colors .accent1 {
+    color: var(--black);
+    background-color: #FF6700;
+}
+.site-plan .colors .accent2 {
+    color: #FFFFFF;
+    background-color: #3A6EA5;
+}
+/*********************** Scenario Section ******************************/
+.scenario {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 5px solid #396e94;
+    margin: 20px 0;
+    font-style: italic;
+}
+.scenario p {
+    margin: 0;
+    color: #333;
+}
+.scenario p::before {
+    content: "Scenario: ";
+    font-weight: bold;
+    color: #236492;
+}
+.scenario p::after {
+    content: " (Click to expand)";
+    color: #396e94;
+    cursor: pointer;
+}
+.scenario p:hover::after {
+    text-decoration: underline;
+}
+/*********************** Navigation Section ******************************/
+ul {
+    background-color: #3e6e90;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+ul a {
+    display: block;
+    color: white;
+    width: auto;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0px;
+    border-radius: 5px;
+}
+ul a:hover {
+    background-color: #e7c24f;
+    color: #27272b;
+}
+ul a.active {
+    background-color: #a43312;
+    color: white;
+}
+ul li {
+    margin: 0 10px;
+    display: block;
+    /* background-color: #a43312; */
+}
+nav li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+/*********************** Main Section Styling ******************************/
+main {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--color-secondary);
+}
+main h2 {
+    color: #396e94;
+}
+main h3 {
+    color: #a43312;
+}
+main p {
+    color: #27272b;
+    line-height: 1.6;
+}
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+/*********************** Body Section ******************************/
+body {
+    font-family: var(--font-body);
+    font-size: var(--base-font-size);
+    line-height: var(--line-height-body);
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh; /* 100% of the viewport height */
+}
+/*********************** Footer Styling ******************************/
+/*********************** Footer Styling ******************************/
+/*********************** Footer Styling ******************************/
+/*********************** Footer Styling ******************************/
+/*********************** Footer Styling ******************************/

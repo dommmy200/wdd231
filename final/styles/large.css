@@ -1,0 +1,16 @@
+@media (min-width: 900px) {
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        min-height: 100vh; /* 100% of the viewport height */
+    }
+    /****************************** Style Index Header *********************************/
+    ul li {
+    margin: 0 10px;
+    display: inline-block;
+}
+}

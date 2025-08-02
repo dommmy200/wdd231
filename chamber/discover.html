@@ -12,12 +12,13 @@
     <meta property="og:description" content="Ugbokolo Chamber of Commerce">
     <meta property="og:image" content="./images/wdd231-pix.webp">
     <meta property="og:url" content="https://dommmy200.github.io/wdd231/">
-    <title>Ugbokolo Chamber of Commerce - Join</title>
+    <title>Ugbokolo Chamber of Commerce - Discover</title>
     <link rel="stylesheet" href="../chamber/styles/normalize.css">
     <link rel="stylesheet" href="../chamber/styles/smaller.css">
+    <link rel="stylesheet" href="../chamber/styles/variable-layout.css">
     <link rel="stylesheet" href="../chamber/styles/larger.css">
     <link rel="icon" href="../chamber/images/favicon-chamb.ico" type="image/x-icon" sizes="16x16 32x32 48x48" id="favicon">
-    <script type="module" src="../chamber/scripts/join.js"></script>
+    <script type="module" src="../chamber/scripts/chamber.js"></script>
 </head>
 <body>
     <div class="container">
@@ -29,62 +30,12 @@
             <ul class="nav-ulist">
                 <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="./directory.html" class="nav-link">Directory</a></li>
-                <li class="nav-item"><a href="./discover.html" class="nav-link">Discover</a></li>
                 <li class="nav-item"><a href="../final/project.html" class="nav-link">Final</a></li>
-                <!-- <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li> -->
             </ul>
         </nav>
     </div>
-    <main class="join-main">
-        <section class="join-section">
-            <h2>Membership Form</h2>
-            <form method="get" action="./thankyou.html" id="join-form" class="join-form">
-                <fieldset class="personal">
-                    <legend>Personal Information*</legend>
-                    <p>Fill in your personal information to join the chamber.</p>
-                    <label for="fname">First Name:</label>
-                    <input type="text" id="fname" name="fname" placeholder="Enter your First Name" autocomplete="given-name" required /><br /><br />
-                    <label for="lname">Last Name:</label>
-                    <input type="text" id="lname" name="lname" placeholder="Enter your Last Name" autocomplete="family-name" required /><br /><br />
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="example@domain.com" autocomplete="email" required /><br /><br />
-                    <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="(012)3456789" autocomplete="tel" required /><br /><br />
-                </fieldset>
-                <fieldset class="fieldset">
-                    <legend>Organisation/Business:</legend>
-                    <label for="organisation">Organisation*</label>
-                    <input type="text" id="organisation" placeholder="Enter Business/Organisation Name" autocomplete="organization" required >
-                    <label for="organisation-title">Business Title:</label>
-                    <input type="text" id="organisation-title" pattern="[A-Za-z\- ]{7,}" placeholder="Allowed characters: Minimum 7 letters, hyphon and space" autocomplete="organization-title" required >
-                    <label for="organisation">Organisational Title</label>
-                    <textarea name="textarea" id="biz-description" rows="4" cols="38" title="Description here" placeholder="Enter Business/Organisation Description"></textarea>
-                    <label for="biz-description">Organisation Description</label>
-                </fieldset>
-                <fieldset class="membership">
-                    <legend>Membership*</legend>
-                    <input type="radio" id="non-profit" class="membership" name="membership" value="4" required>
-                    <label for="non-profit" title="Non Profit">Non Profit</label>
-                    <input type="radio" id="gold" class="membership" name="membership" value="3" required>
-                    <label for="gold" title="Gold">Gold</label>
-                    <input type="radio" id="silver" class="membership" name="membership" value="2" required>
-                    <label for="silver" title="Silver">Silver</label>
-                    <input type="radio" id="bronze" class="membership" name="membership" value="1" required>
-                    <label for="bronze" title="Bronze">Bronze</label>
-                </fieldset>
-                <button class="submit" type="submit">Join The Chamber</button>
-                <p id="error"></p>
-            </form>
-        </section>
-        <section id="membership-benefits" class="benefits-section">
-            <h2>Membership Status</h2>
-            <ul id="benefits-list" class="benefits-list"></ul>
-            <dialog id="benefits-dialog" class="benefits-dialog"></dialog>
-        </section>
+    <main class="wrapper">
     </main>
-    <!-- <footer class="dir-footer">
-        <p>&copy; 2023 Ugbokolo Chamber of Commerce. All rights reserved.</p>
-    </footer> -->
     <footer id="footer" class="footer dir-footer">
         <div class="address">
             <p><strong>Ugbokolo Chamber of Commerce</strong></p>

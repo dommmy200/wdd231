@@ -207,15 +207,53 @@ export function toggleSwitching() {
         }
     });
 }
-// export function modeSwitching() {
-//     const toggleSwitch = document.getElementById('mode-switch');
-//     toggleSwitch.addEventListener('change', () => {
-//         if (toggleSwitch.checked) {
-//             console.log('Switch in ON')
-//             createCardView();
-//         } else {
-//             console.log('Switch in OFF')
-//             createListView();
-//         }
-//     });
-// }
+export function displayLagosPlaces(places) {
+  const placesContainer = document.querySelector('.wrapper');
+  placesContainer.innerHTML = ''; // Clear existing content
+
+  places.forEach(place => {
+    const placeCard = document.createElement('div');
+    placeCard.classList.add('place-card');
+
+    const img = document.createElement('img');
+    img.classList.add('place-image');
+    // img.style.width = '100%';
+    // img.style.height = 'auto';
+    img.style.objectFit = 'cover';
+    img.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
+    img.style.transition = 'transform 0.3s, box-shadow 0.3s';
+    img.addEventListener('mouseover', () => {
+      img.style.transform = 'scale(1.05)';
+      img.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.2)';
+    });
+    img.addEventListener('mouseout', () => {
+      img.style.transform = 'scale(1)';
+      img.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
+    });
+    img.setAttribute('src', place.pictureUrl);
+    img.setAttribute('alt', place.description);
+    img.setAttribute('loading', 'lazy');
+
+    const name = document.createElement('h3');
+    name.classList.add('place-name');
+    name.textContent = place.name;
+
+    const description = document.createElement('p');
+    description.classList.add('place-description');
+    description.textContent = place.description;
+
+    const location = document.createElement('p');
+    location.classList.add('place-location');
+    location.style.fontStyle = 'italic';
+    location.style.fontSize = '0.9em';
+    location.textContent = `Location: ${place.location}`;
+
+    placeCard.appendChild(img);
+    placeCard.appendChild(name);
+    placeCard.appendChild(description);
+    placeCard.appendChild(location);
+
+    placesContainer.appendChild(placeCard);
+  });
+  
+}

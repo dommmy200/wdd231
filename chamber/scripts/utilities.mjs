@@ -217,19 +217,9 @@ export function displayLagosPlaces(places) {
 
     const img = document.createElement('img');
     img.classList.add('place-image');
-    // img.style.width = '100%';
-    // img.style.height = 'auto';
     img.style.objectFit = 'cover';
     img.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
     img.style.transition = 'transform 0.3s, box-shadow 0.3s';
-    img.addEventListener('mouseover', () => {
-      img.style.transform = 'scale(1.05)';
-      img.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.2)';
-    });
-    img.addEventListener('mouseout', () => {
-      img.style.transform = 'scale(1)';
-      img.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
-    });
     img.setAttribute('src', place.pictureUrl);
     img.setAttribute('alt', place.description);
     img.setAttribute('loading', 'lazy');
@@ -257,3 +247,4 @@ export function displayLagosPlaces(places) {
   });
   
 }
+

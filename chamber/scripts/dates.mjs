@@ -34,3 +34,22 @@ export function insertTextAndModifiedDate() {
     dateContainer.appendChild(lastModifiedDate);
     dateContainer.appendChild(dateTextNode);
 }
+// Calculate days elapsed
+export function calculateDaysElapsed() {
+  const storedDateTime = parseInt(localStorage.getItem('storedDate'));
+  if (!storedDateTime) {
+    localStorage.setItem('storedDate', Date.now().toString());
+    console.log('No stored date found');
+  }
+
+  const storedDate = new Date(storedDateTime);
+  const now = new Date();
+
+  const timeDiff = now.getTime() - storedDate.getTime();
+  const daysElapsed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+  const daysFraction = timeDiff / (1000 * 60 * 60 * 24);
+
+  console.log(`Days elapsed in whole: ${daysElapsed}`);
+  console.log(`Days elapsed in fraction: ${daysFraction}`);
+  return {daysElapsed, daysFraction};
+}

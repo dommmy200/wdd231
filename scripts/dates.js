@@ -36,4 +36,4 @@ function insertTextAndModifiedDate() {
 }
 
 insertDateNameAndIcon();
-insertTextAndModifiedDate();
+// insertTextAndModifiedDate();

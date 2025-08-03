@@ -1,4 +1,14 @@
+.visiting {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-areas: 
+  "left right"
+  ". right"
+  ". right";
+}
 .wrapper {
+  grid-area: right;
+
   display: grid;
   grid-template-areas: 
   "center";
@@ -7,11 +17,20 @@
   margin: 0 auto;
   padding: 10px;
 }
-
+.visit-info {
+  grid-area: left;
+  
+  display: flex;
+  width: 50px;
+  flex-direction: column;
+  background-color: rgb(42, 151, 151);
+  cursor: pointer;
+  margin: 20px;
+}
 .place-card {
   display: grid;
-  background-color: rgb(177, 194, 171);
-  width: 350px;
+  background-color: rgb(219, 226, 217);
+  width: 300px;
   height: 450px;
   margin: 7px auto;
   border-radius: 10px;
@@ -48,17 +67,73 @@
   grid-area: location;
   font-size: 1em;
   font-weight: bold;
-  color: #555;
+  color: #000000;
   margin-top: 10px;
 }
+/******************* Modal Style ***********************/
+#dialog-box {
+  display: none;
+}
+.open-dialog-btn {
+  background-color: #003366;
+  color: #ffffff;
+  width: 80px;
+  height: 80px;
+  margin: 5px auto;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.discover-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #e69999;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.dialog-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 100px;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #003366;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.dialog-box button {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    background-color: #e30a0a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/******************* Media Style ***********************/
 @media screen and (min-width: 800px) {
   .wrapper {
     grid-template-areas: 
     "left center";
   }
   .place-card {
-    width: 340px;
+    width: 260px;
     height: 500px;
+  }
+  .place-image:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
   }
   
 }
@@ -68,7 +143,7 @@
     "left right";
   }
   .place-card {
-    width: 520px;
+    width: 400px;
     height: 200px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
@@ -88,8 +163,8 @@
     transition: width 0.3s ease-in-out;
   }
   .place-card {
-    width: 500px;
-    height: 200px;
+    /* width: 400px; */
+    /* height: 200px; */
     grid-template-columns: 1fr 1fr;
   }
   

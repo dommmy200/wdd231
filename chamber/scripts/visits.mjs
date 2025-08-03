@@ -1,3 +1,5 @@
+import { calculateDaysElapsed } from "./dates.mjs";
+
 async function getStatusBenefits() {
   try {
     const response = await fetch("./data/benefits.json"); // Fetch the JSON file
@@ -13,9 +15,11 @@ async function getStatusBenefits() {
     throw error; // Rethrow the error for handling by the caller
   }
 }
+
 function getDOM() {
   return document.querySelector("#benefits-list");
 }
+
 export function displayThankYou() {
   const params = new URLSearchParams(window.location.search);
   
@@ -66,6 +70,7 @@ export function displayThankYou() {
     }
   });
 }
+
 function createBenefitModals(membership) {
     const benefitsDetails = document.querySelector('#benefits-dialog');
     benefitsDetails.innerHTML = '';
@@ -81,6 +86,7 @@ function createBenefitModals(membership) {
       benefitsDetails.close();
     });
 }
+
 export async function displayMembershipBenefits() {
   const benefits = await getStatusBenefits();
   benefits.forEach((membership) => {
@@ -96,18 +102,60 @@ export async function displayMembershipBenefits() {
     benefitsContainer.appendChild(li);
   });
 }
-// export function regexHandler() {
-//   const organisationTitle = document.getElementById("organisation-title");
-//   const error = document.getElementById("error");
-//   // console.log(error);
-//   // error.style.color = 'red';
-//   const regex = /^[A-Za-z\- ]$/; // Regex to allow letters, dash, and space
-//   organisationTitle.addEventListener("input", () => {
-//   const value = organisationTitle.value;
-//   if (!regex.test(value)) {
-//     error.textContent = "Only letters, hyphens, and spaces allowed; must be at least 7 characters.";
-//   } else {
-//     error.textContent = "";
-//   }
-// });
-// }
+
+function getNumberOfVisits() {
+    const visits = window.localStorage.getItem("visits");
+    const visitCount = visits ? parseInt(visits, 10) + 1 : 1;
+    localStorage.setItem("visits", visitCount);
+    return visitCount;
+}
+
+function numberOfDays(timeInDays) {
+  if (timeInDays > 1) {
+    return `${Math.abs(timeInDays)}`;
+  } else if (timeInDays === 1) {
+    return `${Math.abs(timeInDays)}`;
+  } else {
+    return `less than a day ago.`;
+  }
+}
+
+function numberOfVisits(visits, timeDiff) {
+  if (visits === 1 || timeDiff < 1.00) {
+    return `Welcome! Let us know if you have any questions.`;
+  } else if (timeDiff > 1.00 && timeDiff < 2.00) {
+    return `Back so soon! Awesome!`;
+  } else {
+    return `You last visited ${visits} days ago.`;
+  }
+}
+
+export function footerDialog() {
+  const openDialogBtn = document.getElementById('open-dialog-btn');
+  const dialogBox = document.getElementById('dialog-box');
+  const closeDialogBtn = document.getElementById('close-dialog-btn');
+
+  let daysElapsed = 0;
+  let daysInFraction = 0.00;
+  const visits = getNumberOfVisits();
+  ({daysElapsed, daysInFraction} = calculateDaysElapsed());
+  const days = numberOfDays(daysElapsed);
+  const visi = numberOfVisits(days, daysInFraction);
+
+  function openDialog() {
+    const dialogContent = document.getElementById('dialog-content');
+    dialogContent.innerHTML = `
+  <p class="p-visit"><strong>Number of visits</strong>: ${visits}</p>
+  <p class="p-visit"><strong>${visi}</strong></p>
+  <p class="p-visit"><strong>You last visited ${days}</strong></p>
+  `;
+    dialogBox.style.display = 'block';
+  }
+
+  function closeDialog() {
+    dialogBox.style.display = 'none';
+  }
+
+  openDialogBtn.addEventListener('click', openDialog);
+  closeDialogBtn.addEventListener('click', closeDialog);
+}

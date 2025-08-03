@@ -34,7 +34,10 @@
             </ul>
         </nav>
     </div>
-    <main class="wrapper">
+    <!-- Modal container -->
+    <main id="visiting" class="visiting">
+        <div id="wrapper" class="wrapper"></div>
+        <button type="button" id="open-dialog-btn" class="open-dialog-btn">Your Visit Info!</button>
     </main>
     <footer id="footer" class="footer dir-footer">
         <div class="address">
@@ -69,6 +72,10 @@
             <p><span id="currentYear" class="current-year"></span> <span>Ugbokolo Chamber of Commerce</span>
             </p>
             <p><span id="last-modified" class="last-modified"></span></p>
+            <div id="dialog-box" class="dialog-box">
+                <p id="dialog-content"></p>
+                <button type="button" id="close-dialog-btn">X</button>
+            </div>
         </div>
     </footer>
 </body>

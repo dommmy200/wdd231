@@ -1,20 +1,32 @@
-import { displayHomePageCards, toggleSwitching, displayLagosPlaces } from "./utilities.mjs";
-import { places } from "../data/lagos-place.mjs";
-import { insertTextAndModifiedDate } from "./dates.mjs";
-import { updateCurrentWeather, updateForecastWeather } from "./weather.mjs";
-// import { displayThankYou } from "./visits.mjs";
+(async () => {
+    const { places } = await import("../data/lagos-place.mjs");
+    
+    if (document.querySelector('.wrapper')) {
+        const util = await import("./utilities.mjs");
+        util.displayLagosPlaces(places);
+    }
+    if (document.getElementById('toggle-switch')) {
+        const util = await import("./utilities.mjs");
+        util.toggleSwitching();
+    }
+    if (document.getElementById('open-dialog-btn')) {
+        const util = await import("./visits.mjs");
+        util.footerDialog();
+    }
+    if (document.querySelector('#current-weather' || document.querySelector('#weather-forecast'))) {
+        const util = await import("./weather.mjs");
+        util.updateCurrentWeather();
+        util.updateForecastWeather();
+    }
+    if (document.getElementById('home-cards')) {
+        const util = await import("./utilities.mjs");
+        util.displayHomePageCards();
+    }
+    if (document.querySelector('#modal-close')) {
+        const util = await import("./visits.mjs");
+        util.visitorsButton();
+    }
 
-// insertDateNameAndIcon();
-insertTextAndModifiedDate();
-
-// modeSwitching();
-displayHomePageCards();
-
-updateCurrentWeather();
-updateForecastWeather();
-
-displayLagosPlaces(places);
-
-toggleSwitching();
-// displayThankYou(); // IGNORE FOR NOW: This function is invokes the thankyou page and should be called at form submission
-// setNumberOfVisits();
+    const util = await import("./dates.mjs");
+    util.insertTextAndModifiedDate();
+})();

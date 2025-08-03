@@ -226,22 +226,34 @@ export function displayLagosPlaces(places) {
 
     const name = document.createElement('h3');
     name.classList.add('place-name');
-    name.textContent = place.name;
+    name.textContent = place.title;
 
     const description = document.createElement('p');
     description.classList.add('place-description');
     description.textContent = place.description;
 
+    
     const location = document.createElement('p');
     location.classList.add('place-location');
     location.style.fontStyle = 'italic';
     location.style.fontSize = '0.9em';
-    location.textContent = `Location: ${place.location}`;
-
+    location.textContent = `Location: ${place.address}`;
+    
+    const button = document.createElement('button');
+    button.classList.add('place-button');
+    button.textContent = `Learn More..`;
+    button.addEventListener('click', () => {
+      button.innerHTML = `${place.title}`;
+    });
+    button.addEventListener('mouseleave', () => {
+      button.textContent = `Learn More..`;
+    });
+    
     placeCard.appendChild(img);
     placeCard.appendChild(name);
     placeCard.appendChild(description);
     placeCard.appendChild(location);
+    placeCard.appendChild(button);
 
     placesContainer.appendChild(placeCard);
   });

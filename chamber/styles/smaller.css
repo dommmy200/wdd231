@@ -256,8 +256,6 @@ main h1 {
     padding-left: 7px;
     width: 71%;
 }
-.card-top {
-}
 .card-bottom {
     display: grid;
     grid-template-columns: 40% 60%;

@@ -1,40 +1,44 @@
+/*********************** Body Styling ******************************/
+
 /*********************** Colors And Typography ******************************/
 :root {
-  --color-primary: #2C3E50;    /* deep blue */
-  --color-secondary: #ECF0F1;  /* light grey */
-  --color-accent: #E67E22;     /* burnt orange accent */
-  --text-on-primary: #FFFFFF;
-  --text-on-secondary: #2C3E50;
-  --black: #000000;
-  --white: #FFFFFF;
-  --queen-blue: #396e94; /* a shade of blue */
-  --safety-orange: #FF6700; /* a shade of orange */
-  --gray-92: #EBEBEB; /* a light gray */
-  --usafa-blue: #004E98; /* a shade of blue */
+    --color-primary: #2C3E50;    /* deep blue */
+    --color-secondary: #ECF0F1;  /* light grey */
+    --color-accent: #E67E22;     /* burnt orange accent */
+    --dark-green: hsl(94, 100%, 22%);      /* dark green */
+    --color-accent-2: #FF6700;
+    --text-on-primary: #FFFFFF;
+    --text-on-secondary: #2C3E50;
+    --black: #000000;
+    --white: #FFFFFF;
+    --queen-blue: #396e94; /* a shade of blue */
+    --safety-orange: #FF6700; /* a shade of orange */
+    --gray-92: #EBEBEB; /* a light gray */
+    --usafa-blue: #004E98; /* a shade of blue */
 
-  /* Base font & scale */
-  --base-font-size: 16px;
-  --scale-ratio: 1.333;
+    /* Base font & scale */
+    --base-font-size: 16px;
+    --scale-ratio: 1.333;
 
-  /* Fluid typography for headings */
-  --h1: clamp(2.5rem, calc(var(--base-font-size) * var(--scale-ratio) * 3), 4rem);
-  --h2: clamp(2rem, calc(var(--h1) / var(--scale-ratio)), 3.5rem);
-  --h3: clamp(1.6rem, calc(var(--h2) / var(--scale-ratio)), 2.5rem);
-  --p: clamp(1rem, 1rem, 1.2rem);
+    /* Fluid typography for headings */
+    --h1: clamp(2.5rem, calc(var(--base-font-size) * var(--scale-ratio) * 3), 4rem);
+    --h2: clamp(2rem, calc(var(--h1) / var(--scale-ratio)), 3.5rem);
+    --h3: clamp(1.6rem, calc(var(--h2) / var(--scale-ratio)), 2.5rem);
+    --p: clamp(1rem, 1rem, 1.2rem);
 
-  /* Font weights */
-  --font-regular: 400;
-  --font-bold: 700;
+    /* Font weights */
+    --font-regular: 400;
+    --font-bold: 700;
 
-  /* Line heights for vertical rhythm */
-  --line-height-body: 1.5;
-  --line-height-heading: 1.25;
+    /* Line heights for vertical rhythm */
+    --line-height-body: 1.5;
+    --line-height-heading: 1.25;
 
-  /* Font family fallback stack */
-  /* --font-body: 'Roboto', Arial, sans-serif;
-  --font-heading: 'Roboto Slab', serif; */
-  --font-display: 'Montserrat', sans-serif;
-  --font-body: 'Source Sans Pro', sans-serif;
+    /* Font family fallback stack */
+    /* --font-body: 'Roboto', Arial, sans-serif;
+    --font-heading: 'Roboto Slab', serif; */
+    --font-display: 'Montserrat', sans-serif;
+    --font-body: 'Source Sans Pro', sans-serif;
 }
 .typography {
     background-color: var(--color-secondary);
@@ -66,7 +70,7 @@ header img {
 }
 /*********************** Footer Styling ******************************/
 footer {
-    background-color: coral;
+    background-color: #317000;
     color: white;
     text-align: center;
     padding: 10px;
@@ -74,7 +78,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
-/*********************** Navigation Section Styling ******************************/
+
 /*********************** Site Plan ******************************/
 .site-plan {
     max-width: 800px;
@@ -173,8 +177,11 @@ footer {
     text-decoration: underline;
 }
 /*********************** Navigation Section ******************************/
+nav {
+    /* height: 100%; */
+}
 ul {
-    background-color: #3e6e90;
+    background-color: var(--dark-green);
     width: 100%;
     color: white;
     padding: 10px;
@@ -187,12 +194,13 @@ ul a {
     width: auto;
     text-decoration: none;
     padding: 10px 15px;
-    margin: 0px;
+    margin: 3px;
     border-radius: 5px;
 }
 ul a:hover {
-    background-color: #e7c24f;
-    color: #27272b;
+    margin: 3px;
+    background-color: var(--color-accent);
+    color: var(--white);
 }
 ul a.active {
     background-color: #a43312;
@@ -214,9 +222,9 @@ nav li a {
 main {
     padding: 20px;
     font-family: Arial, sans-serif;
-    max-width: 800px;
+    max-width: 70%;
     margin: 0 auto;
-    background-color: var(--color-secondary);
+    background-color: var(--white);
 }
 main h2 {
     color: #396e94;
@@ -234,13 +242,98 @@ main img {
     display: block;
     margin: 20px 0;
 }
+/****************************** Style Hero Image *********************************/
+.taste-hero-image {
+  width: 100%;
+  /* background-image: url('../images/idoma-drums.webp'); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 7px;
+}
+/****************************** Style Main *********************************/
+.taste-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "left right";
+    background: transparent;
+}
+.image-taste {
+    grid-area: left;
+    
+    /* display: flex; */
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.taste-right {
+    grid-area: right;
+    
+    display: grid;
+    height: 500px;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas: 
+    "top"
+    "mid"
+    "bottom";
+}
+.taste-right h1 {
+    grid-area: top;
+    color: var(--color-accent-2);
+    padding: 10px;
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+}
+.taste-right img, .taste-right h1 {
+
+    border: var(--color-accent-2) solid 1px;
+    border-radius: 7px;
+}
+.taste-right img {
+    grid-area: mid;
+    margin: 0 auto;
+
+}
+.taste-btn {
+    grid-area: bottom;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+/* .btn-1::before {
+    content: url('../images/taste-menu-icon.png');
+} */
+.btn-1 {
+    display: block;
+    border-radius: 7px;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+    height: 50px;
+    cursor: pointer;
+    padding-top: 10px;
+    font-size: x-large;
+    background-color: var(--color-accent);
+    color: #f9f9f9;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.btn-1:hover {
+    background-color: var(--white);
+    border: var(--color-accent-2) solid 1px;
+    color: var(--color-accent);
+    box-sizing: border-box;
+}
 /*********************** Body Section ******************************/
 body {
     font-family: var(--font-body);
     font-size: var(--base-font-size);
     line-height: var(--line-height-body);
     color: var(--color-secondary);
-    background-color: var(--color-primary);
+    background-color: var(--white);
     margin: 0;
     padding: 0;
 }
@@ -253,7 +346,29 @@ html, body {
 body {
     min-height: 100vh; /* 100% of the viewport height */
 }
-/*********************** Footer Styling ******************************/
+header > *, nav > *, main > *, footer > * {
+  margin: 0;
+  padding: 0;
+}
+/*********************** Dynamic header, nav & footer ******************************/
+.taste-header {
+    background: transparent;
+}
+.taste-footer {
+    background-color: hsla(94, 100%, 22%, 0.9); /* semi-transparent black */
+}
+.taste-nav {
+    background: transparent;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.taste-nav.fixed {
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 /*********************** Footer Styling ******************************/
 /*********************** Footer Styling ******************************/
 /*********************** Footer Styling ******************************/

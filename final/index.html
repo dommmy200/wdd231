@@ -12,31 +12,44 @@
     <meta property="og:description" content="TasteBuds Catering Services is a premier catering service specializing in African cuisine, offering a wide range of services including event catering, menu planning, and personalized culinary experiences.">
     <meta property="og:image" content="./images/chef-logo-silhouette.avif">
     <meta property="og:url" content="https://dommmy200.github.io/wdd231/">
+    <link rel="icon" href="../final/images/favicon-16x16.png" type="image/x-icon" sizes="16x16 32x32 48x48" id="favicon">
     <link rel="stylesheet" href="./styles/small.css">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/large.css">
+    <script type="module" src="./scripts/app.js"></script>
     <title>African TasteBuds Catering Services</title>
 </head>
 <body>
-    <header class="tastebuds-header">
+    <header class="taste-header">
         <img src="./images/chef-logo-silhouette.avif" alt="African TasteBuds Catering Services Logo" width="50" height="50" loading="lazy">
         <p>African TasteBuds Catering Services</p>
     </header>
-    <nav>
-        <ul>
+    <nav class="taste-nav">
+        <ul class="taste-ul">
             <li><a href="./services.html">Services</a></li>
             <li><a href="./menus.html">Menus</a></li>
             <li><a href="./contacts.html">Contacts</a></li>
         </ul>
     </nav>
-    <main>
-
+    <main class="taste-main">
+        <div class="image-taste">
+            <img class="taste-hero-image" src="../final/images/taste-hero-image.jpg" alt="Hero image for TasteBuds Catering Services" loading="lazy">         
+        </div>
+        <div class="taste-right">
+            <h1><strong>African TasteBuds Catering Services</strong></h1>
+            <img src="./images/taste-buds-img.webp" alt="">
+            <div id="taste-btn" class="taste-btn">
+                <a href="./services.html" id="btn-1" class="btn-1">Services</a>
+                <a href="./menus.html" id="btn-2" class="btn-1">Menu</a>
+                <a href="./contacts.html" id="btn-3" class="btn-1">Contacts</a>
+            </div>
+        </div>
     </main>
-    <footer>
+    <footer class="taste-footer">
         <p>&copy; 2023 Your Name</p>
         <p>Last updated: October 2023</p>
-        <a href="./attributes.html">Attributes</a>
-        <a href="./project-siteplan.html">Site Plan</a>
+        <a href="./attributes.html" class="taste-attributes">Attributes</a>
+        <a href="./project-siteplan.html" class="taste-splan">Site Plan</a>
     </footer>
 </body>
 </html>

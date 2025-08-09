@@ -1,0 +1,147 @@
+[
+  {
+    "name": "Mini Spring Rolls",
+    "description": "Crispy rolls filled with vegetables and served with sweet chili sauce.",
+    "recipe": "Shred cabbage, carrots, and bean sprouts. Wrap in spring roll wrappers. Deep-fry until golden brown. Serve with sweet chili sauce.",
+    "images": [
+      "./images/spring-rolls1-200x300.webp",
+      "./images/spring-rolls2-200x300.webp"
+    ]
+  },
+  {
+    "name": "Stuffed Mushrooms",
+    "description": "Mushroom caps filled with cheese, herbs, and breadcrumbs.",
+    "recipe": "Remove mushroom stems, mix cream cheese, garlic, and parsley. Stuff caps and bake at 180°C for 20 minutes.",
+    "images": [
+      "./images/stuffed-mushrooms1-200x300.webp",
+      "./images/stuffed-mushrooms2-200x300.webp"
+    ]
+  },
+  {
+    "name": "Bruschetta",
+    "description": "Toasted bread topped with fresh tomatoes, basil, and olive oil.",
+    "recipe": "Dice tomatoes, mix with olive oil, garlic, and basil. Spoon over toasted baguette slices.",
+    "images": [
+      "./images/brushchetta1-200x300.webp",
+      "./images/brushchetta2-200x300.webp"
+    ]
+  },
+  {
+    "name": "Caprese Skewers",
+    "description": "Cherry tomatoes, mozzarella balls, and basil on skewers drizzled with balsamic glaze.",
+    "recipe": "Thread tomatoes, mozzarella, and basil onto skewers. Drizzle with balsamic glaze before serving.",
+    "images": [
+      "./images/caprese-skewers1-200x300.webp",
+      "./images/caprese-skewers2-200x300.webp"
+    ]
+  },
+  {
+    "name": "Grilled Chicken/Herbs",
+    "description": "Juicy grilled chicken marinated in fresh herbs.",
+    "recipe": "Marinate chicken breasts with olive oil, rosemary, thyme, and garlic. Grill for 6–8 minutes per side.",
+    "images": [
+      "./images/herb-grilled-chicken1-200x300.webp",
+      "./images/herb-grilled-chicken2-200x300.webp"
+    ]
+  },
+  {
+    "name": "Vegetable Lasagna",
+    "description": "Layers of pasta, roasted vegetables, and creamy cheese sauce.",
+    "recipe": "Roast zucchini, eggplant, and peppers. Layer with lasagna sheets, ricotta, and tomato sauce. Bake at 180°C for 40 minutes.",
+    "images": [
+      "./images/roasted-veg-lasagna1-200x300.webp",
+      "./images/roasted-veg-lasagna2-200x300.webp"
+    ]
+  },
+  {
+    "name": "Beef Stroganoff",
+    "description": "Tender beef strips in a creamy mushroom sauce.",
+    "recipe": "Sauté beef strips and onions. Add mushrooms, sour cream, and beef stock. Simmer until thickened.",
+    "images": [
+        "./images/beef-stroganoff2-200x300.webp",
+        "./images/beef-stroganoff1-200x300.webp"
+      
+    ]
+  },
+  {
+    "name": "Lemon Butter Salmon",
+    "description": "Pan-seared salmon fillets with lemon butter sauce.",
+    "recipe": "Season salmon with salt and pepper. Pan-fry in butter. Add lemon juice and parsley before serving.",
+    "images": [
+      "./images/lemon-butter-salmon1-200x300.webp",
+      "./images/lemon-rosemary-salmon2-200x300.webp"
+    ]
+  },
+  {
+    "name": "Jollof Rice",
+    "description": "Jollof Rice is a vibrant West African dish cooked in seasoned tomato sauce.",
+    "recipe": "Rice simmered in a spiced tomato-pepper blend, with stock, seasonings, and fried vegetables.",
+    "images": [
+      "./images/jollof-rice1-200x300.webp",
+      "./images/jollof-rice2-200x300.webp"
+    ]
+  },
+  {
+    "name": "Egusi Soup",
+    "description": "Egusi soup is a rich West African stew made from ground melon seeds.",
+    "recipe": "Ground egusi cooked with palm oil, leafy greens, spices, and assorted meats or fish",
+    "images": [
+      "./images/egusi-soup1-200x300.webp",
+      "./images/egusi-soup2-200x300.webp"
+    ]
+  },
+  {
+    "name": "Okra Soup",
+    "description": "Okra soup is a savory, thick West African dish with tender, slimy texture.",
+    "recipe": "Fresh okra simmered with palm oil, spices, meats, and leafy vegetables for flavor.",
+    "images": [
+      "./images/okra-soup1-200x300.webp",
+      "./images/okra-soup2-200x300.webp"
+    ]
+  },
+  {
+    "name": "Water Leaves Soup",
+    "description": "Light, nutritious soup with tender waterleaf, palm oil, meats, and mild spices",
+    "recipe": "Fresh waterleaf simmered with palm oil, meats, stockfish, and seasonings for flavor.",
+    "images": [
+      "./images/waterleaves-soup1-200x300.webp",
+      "./images/waterleaves-soup2-200x300.webp"
+    ]
+  },
+  {
+    "name": "Fruit Punch",
+    "description": "Refreshing mix of fruit juices served chilled.",
+    "recipe": "Mix pineapple, orange, and cranberry juices. Add sliced citrus fruits and ice.",
+    "images": [
+      "./images/fruit-Punch1-200x300.webp",
+      "./images/fruit-Punch2-200x300.webp"
+    ]
+  },
+  {
+    "name": "Miyan Kuka",
+    "description": "Non-alcoholic cocktails with creative flavors.",
+    "recipe": "Mix fruit juices with soda water and garnish with mint leaves and citrus slices.",
+    "images": [
+      "./images/miyan-kuka1-200x300.webp",
+      "./images/miyan-kuka2-200x300.webp"
+    ]
+  },
+  {
+    "name": "Edikang Ikong Soup",
+    "description": "Rich Nigerian vegetable soup made with pumpkin leaves, waterleaf, assorted meats, and fish.",
+    "recipe": "Pumpkin leaves and waterleaf cooked with palm oil, meats, fish, and traditional spices.",
+    "images": [
+      "./images/edikangikong-soup1-200x300.webp",
+      "./images/edikangikong-soup2-200x300.webp"
+    ]
+  },
+  {
+    "name": "Amala Ewedu",
+    "description": "Traditional Nigerian delicac among the Yoruba people made of yam flour. Ewedu soup is from jute leaves, with locust beans and bean soup.",
+    "recipe": "2 cups yam flour (elubo)4 cups water",
+    "images": [
+      "./images/amala-ewedu1-200x300.webp",
+      "./images/amala-ewedu2-200x300.webp"
+    ]
+  }
+]

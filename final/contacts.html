@@ -8,19 +8,26 @@
         content="TasteBuds Catering Services is a premier catering service specializing in African cuisine, offering a wide range of services including event catering, menu planning, and personalized culinary experiences.">
     <meta name="keywords"
         content="">
-    <meta property="og:title" content="TasteBuds Catering Services">
+    <meta property="og:title" content="TasteBuds Catering Services. The contacts page">
     <meta property="og:description" content="TasteBuds Catering Services is a premier catering service specializing in African cuisine, offering a wide range of services including event catering, menu planning, and personalized culinary experiences.">
     <meta property="og:image" content="./images/chef-logo-silhouette.avif">
     <meta property="og:url" content="https://dommmy200.github.io/wdd231/">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+Pro:wght@300;600&family=Comfortaa:wght@400;700&family=Bad+Script:wght@400;700&display=swap"/>
+    <link rel="icon" href="../final/images/favicon-16x16.png" type="image/x-icon" sizes="16x16 32x32 48x48" id="favicon">
     <link rel="stylesheet" href="./styles/small.css">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/large.css">
+    <script type="module" src="./scripts/app.js"></script>
     <title>Contacts</title>
 </head>
 <body>
    <header class="tastebuds-header">
         <img src="./images/chef-logo-silhouette.avif" alt="African TasteBuds Catering Services Logo" width="50" height="50" loading="lazy">
         <p>African TasteBuds Catering Services</p>
+        <div>
+            <h1>Contact Us</h1>
+            <p>Let's make your next event unforgettable.</p>
+        </div>
     </header>
     <nav>
         <ul>
@@ -30,13 +37,70 @@
             <li><a href="./contacts.html">Contacts</a></li>
         </ul>
     </nav>
-    <main>
+    <main class="contacts">
+        <section>
+            <h2>Send Us a Message</h2>
+            <form id="form-action" class="form-action" action="./form-action.html" method="GET">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="e.g Obute John"><br>
 
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="e.g example@email.com"><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g 801-123-456"><br>
+
+                <fieldset class="events">
+                    <legend>Select Event Options:</legend>
+                    
+                    <label for="wedding" title="Wedding">Wedding Catering  <input type="radio" id="wedding" class="event" name="event" value="1" required></label>
+                    
+                    <label for="corporate" title="Corporate">Corporate Catering  <input type="radio" id="corporate" class="event" name="event" value="2" required></label>
+                    
+                    <label for="private" title="Private">Private Parties  <input type="radio" id="private" class="event" name="event" value="3" required></label>
+                    
+                    <label for="holiday" title="Holiday">Holiday Catering  <input type="radio" id="holiday" class="event" name="event" value="4" required></label>
+                
+                    <label for="social" title="Social">Social Events  <input type="radio" id="social" class="event" name="event" value="5" required></label>
+                    
+                    <label for="outdoor" title="Outdoor">Outdoor & Picnic Catering <input type="radio" id="outdoor" class="event" name="event" value="6" required></label>
+                    
+                    <label for="festival" title="Festival">Festival & Fair Catering  <input type="radio" id="festival" class="event" name="event" value="7" required></label>
+                    
+                    <label for="funeral" title="Funeral">Funeral Catering  <input type="radio" id="funeral" class="event" name="event" value="8" required></label>
+                    
+                    <label for="charity" title="Charity">Charity & Fundraising Events  <input type="radio" id="charity" class="event" name="event" value="9" required></label>
+                    
+                    <label for="special" title="Special">Special Dietary Catering  <input type="radio" id="special" class="event" name="event" value="10" required></label>
+                    
+                </fieldset><br>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Type message here:"></textarea><br>
+
+                <button class="submit" type="submit">Submit Message</button>
+            </form>
+        </section>
+
+        <section>
+        <h2>Our Contact Details</h2>
+        <p><strong>Email:</strong> info@africantastebuds.com</p>
+        <p><strong>Phone:</strong> +234-8133-133-532</p>
+        <p><strong>Address:</strong> 13 Olawale Adegboyega Street, Ikeja, Lagos, Nigeria</p>
+        </section>
+
+        <section>
+        <h2>Follow Us</h2>
+        <p>
+            <a href="#">Instagram</a> |
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a>
+        </p>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2023 Your Name</p>
-        <p>Last updated: October 2023</p>
-        <a href="./attributes.html">Attributes</a>
+        <p>&copy; 2025 Abah Dominic<span id="last-modified" class="last-modified"></span></p>
+        <a href="./attributes.html" class="taste-attributes">Attributes</a>
     </footer>
 </body>
 </html>

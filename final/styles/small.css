@@ -134,11 +134,7 @@
     display: flex;
     justify-content: space-between;
 }
-.site-plan .colors th {
-    width: 25%;
-    text-align: center;
-}
-.site-plan .colors td {
+.site-plan .colors th, .site-plan .colors td {
     width: 25%;
     text-align: center;
 }
@@ -203,9 +199,9 @@ main {
     box-sizing: border-box;
 
 }
-main h2 {
+/* main h2 {
     color: #396e94;
-}
+} */
 main h3 {
     color: #a43312;
 }
@@ -311,15 +307,13 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    min-height: 100vh; /* 100% of the viewport height */
 }
 html, body {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-}
-body {
-    min-height: 100vh; /* 100% of the viewport height */
 }
 header > *, nav > *, main > *, footer > * {
   margin: 0;

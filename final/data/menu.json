@@ -4,8 +4,8 @@
     "description": "Crispy rolls filled with vegetables and served with sweet chili sauce.",
     "recipe": "Shred cabbage, carrots, and bean sprouts. Wrap in spring roll wrappers. Deep-fry until golden brown. Serve with sweet chili sauce.",
     "images": [
-      "./images/spring-rolls1-200x300.webp",
-      "./images/spring-rolls2-200x300.webp"
+      "./images/spring1-200x300.webp",
+      "./images/spring2-200x300.webp"
     ]
   },
   {
@@ -13,8 +13,8 @@
     "description": "Mushroom caps filled with cheese, herbs, and breadcrumbs.",
     "recipe": "Remove mushroom stems, mix cream cheese, garlic, and parsley. Stuff caps and bake at 180°C for 20 minutes.",
     "images": [
-      "./images/stuffed-mushrooms1-200x300.webp",
-      "./images/stuffed-mushrooms2-200x300.webp"
+      "./images/mushrooms1-200x300.webp",
+      "./images/mushrooms2-200x300.webp"
     ]
   },
   {
@@ -31,8 +31,8 @@
     "description": "Cherry tomatoes, mozzarella balls, and basil on skewers drizzled with balsamic glaze.",
     "recipe": "Thread tomatoes, mozzarella, and basil onto skewers. Drizzle with balsamic glaze before serving.",
     "images": [
-      "./images/caprese-skewers1-200x300.webp",
-      "./images/caprese-skewers2-200x300.webp"
+      "./images/caprese1-200x300.webp",
+      "./images/caprese2-200x300.webp"
     ]
   },
   {
@@ -40,8 +40,8 @@
     "description": "Juicy grilled chicken marinated in fresh herbs.",
     "recipe": "Marinate chicken breasts with olive oil, rosemary, thyme, and garlic. Grill for 6–8 minutes per side.",
     "images": [
-      "./images/herb-grilled-chicken1-200x300.webp",
-      "./images/herb-grilled-chicken2-200x300.webp"
+      "./images/herb1-200x300.webp",
+      "./images/herb2-200x300.webp"
     ]
   },
   {
@@ -49,8 +49,8 @@
     "description": "Layers of pasta, roasted vegetables, and creamy cheese sauce.",
     "recipe": "Roast zucchini, eggplant, and peppers. Layer with lasagna sheets, ricotta, and tomato sauce. Bake at 180°C for 40 minutes.",
     "images": [
-      "./images/roasted-veg-lasagna1-200x300.webp",
-      "./images/roasted-veg-lasagna2-200x300.webp"
+      "./images/roast1-200x300.webp",
+      "./images/roast2-200x300.webp"
     ]
   },
   {
@@ -58,8 +58,8 @@
     "description": "Tender beef strips in a creamy mushroom sauce.",
     "recipe": "Sauté beef strips and onions. Add mushrooms, sour cream, and beef stock. Simmer until thickened.",
     "images": [
-        "./images/beef-stroganoff2-200x300.webp",
-        "./images/beef-stroganoff1-200x300.webp"
+        "./images/beef2-200x300.webp",
+        "./images/beef1-200x300.webp"
       
     ]
   },
@@ -68,8 +68,8 @@
     "description": "Pan-seared salmon fillets with lemon butter sauce.",
     "recipe": "Season salmon with salt and pepper. Pan-fry in butter. Add lemon juice and parsley before serving.",
     "images": [
-      "./images/lemon-butter-salmon1-200x300.webp",
-      "./images/lemon-rosemary-salmon2-200x300.webp"
+      "./images/lemon1-200x300.webp",
+      "./images/lemon2-200x300.webp"
     ]
   },
   {
@@ -77,8 +77,8 @@
     "description": "Jollof Rice is a vibrant West African dish cooked in seasoned tomato sauce.",
     "recipe": "Rice simmered in a spiced tomato-pepper blend, with stock, seasonings, and fried vegetables.",
     "images": [
-      "./images/jollof-rice1-200x300.webp",
-      "./images/jollof-rice2-200x300.webp"
+      "./images/jollof1-200x300.webp",
+      "./images/jollof2-200x300.webp"
     ]
   },
   {
@@ -86,8 +86,8 @@
     "description": "Egusi soup is a rich West African stew made from ground melon seeds.",
     "recipe": "Ground egusi cooked with palm oil, leafy greens, spices, and assorted meats or fish",
     "images": [
-      "./images/egusi-soup1-200x300.webp",
-      "./images/egusi-soup2-200x300.webp"
+      "./images/egusi1-200x300.webp",
+      "./images/egusi2-200x300.webp"
     ]
   },
   {
@@ -95,8 +95,8 @@
     "description": "Okra soup is a savory, thick West African dish with tender, slimy texture.",
     "recipe": "Fresh okra simmered with palm oil, spices, meats, and leafy vegetables for flavor.",
     "images": [
-      "./images/okra-soup1-200x300.webp",
-      "./images/okra-soup2-200x300.webp"
+      "./images/okra1-200x300.webp",
+      "./images/okra2-200x300.webp"
     ]
   },
   {
@@ -104,8 +104,8 @@
     "description": "Light, nutritious soup with tender waterleaf, palm oil, meats, and mild spices",
     "recipe": "Fresh waterleaf simmered with palm oil, meats, stockfish, and seasonings for flavor.",
     "images": [
-      "./images/waterleaves-soup1-200x300.webp",
-      "./images/waterleaves-soup2-200x300.webp"
+      "./images/water1-200x300.webp",
+      "./images/water2-200x300.webp"
     ]
   },
   {
@@ -113,8 +113,8 @@
     "description": "Refreshing mix of fruit juices served chilled.",
     "recipe": "Mix pineapple, orange, and cranberry juices. Add sliced citrus fruits and ice.",
     "images": [
-      "./images/fruit-Punch1-200x300.webp",
-      "./images/fruit-Punch2-200x300.webp"
+      "./images/fruit1-200x300.webp",
+      "./images/fruit2-200x300.webp"
     ]
   },
   {
@@ -122,8 +122,8 @@
     "description": "Non-alcoholic cocktails with creative flavors.",
     "recipe": "Mix fruit juices with soda water and garnish with mint leaves and citrus slices.",
     "images": [
-      "./images/miyan-kuka1-200x300.webp",
-      "./images/miyan-kuka2-200x300.webp"
+      "./images/miyan1-200x300.webp",
+      "./images/miyan2-200x300.webp"
     ]
   },
   {
@@ -131,8 +131,8 @@
     "description": "Rich Nigerian vegetable soup made with pumpkin leaves, waterleaf, assorted meats, and fish.",
     "recipe": "Pumpkin leaves and waterleaf cooked with palm oil, meats, fish, and traditional spices.",
     "images": [
-      "./images/edikangikong1-200x300.webp",
-      "./images/edikangikong2-200x300.webp"
+      "./images/edikang1-200x300.webp",
+      "./images/edikang2-200x300.webp"
     ]
   },
   {
@@ -140,8 +140,8 @@
     "description": "Traditional Nigerian delicac among the Yoruba people made of yam flour. Ewedu soup is from jute leaves, with locust beans and bean soup.",
     "recipe": "2 cups yam flour (elubo)4 cups water",
     "images": [
-      "./images/amala-ewedu1-200x300.webp",
-      "./images/amala-ewedu2-200x300.webp"
+      "./images/amala1-200x300.webp",
+      "./images/amala2-200x300.webp"
     ]
   }
 ]

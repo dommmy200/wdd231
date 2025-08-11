@@ -1,11 +1,9 @@
-/*********************** Body Styling ******************************/
-
 /*********************** Colors And Typography ******************************/
 :root {
     --color-primary: #2C3E50;    /* deep blue */
     --color-secondary: #ECF0F1;  /* light grey */
     --color-accent: #E67E22;     /* burnt orange accent */
-    --dark-green: hsl(94, 100%, 22%);      /* dark green */
+    --dark-green: #317000;      /* dark green */
     --color-accent-2: #FF6700;
     --text-on-primary: #FFFFFF;
     --text-on-secondary: #2C3E50;
@@ -48,25 +46,52 @@
     color: var(--color-primary);
 }
 /*********************** Header Styling ******************************/
-header {
-    background-color:var(--color-primary);
-    color: var(--text-on-primary);
-    padding: 10px;
-    width: 100%;
-    height: 80px;
-    box-sizing: border-box;
+/*********************** Hamburger Styling ******************************/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--dark-green);
+  padding: 0.5rem 1rem;
 }
-header p {
-    font-size: 1em;
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
     margin: 0;
-    display: inline-block;
-    vertical-align: middle;
 }
-header img {
-    width: 50px;
-    height: 50px;
-    vertical-align: middle;
-    margin-right: 10px;
+.hamburger {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: none; /* hidden until toggled */
+  flex-direction: column;
+  background: var(--dark-green);
+  list-style: none;
+  position: absolute;
+  top: 9rem;
+  right: .5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.nav-links.show {
+  display: flex;
+  z-index: 1;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0;
 }
 
 /*********************** Site Plan ******************************/
@@ -167,42 +192,7 @@ header img {
     text-decoration: underline;
 }
 /*********************** Navigation Section ******************************/
-.taste-nav {
-    display: none;
-}
-.taste-nav.show {
-    display: block;
-    width: 200px;
-    height: 300px;
-    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    position: absolute;
-    top: 80px;
-    right: 3px;
-}
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
-/*********************** Hamburger Trials ******************************/
-.hamburger {
-    display: block;
-    width: 24px;
-    height: 24px;
-    font-size: larger;
-    color: #040404;
-}
 
-.hamburger::before {
-    content: '\00D7';
-}
-
-.hamburger.show::before {
-    content: '\003D';
-}
 /*********************** Main Section Styling ******************************/
 main {
     padding: 20px;
@@ -210,6 +200,7 @@ main {
     max-width: 70%;
     margin: 0 auto;
     background-color: var(--white);
+    box-sizing: border-box;
 
 }
 main h2 {
@@ -222,16 +213,10 @@ main p {
     color: #27272b;
     line-height: 1.6;
 }
-main img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px 0;
-}
 /****************************** Style Hero Image *********************************/
 .taste-hero-image {
-    width: 100%;
-    /* background-image: url('../images/idoma-drums.webp'); */
+    max-width: 100%;
+    height: auto;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -240,26 +225,24 @@ main img {
 /****************************** Style Main *********************************/
 .taste-main {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: "left right";
+    grid-template-columns: 1fr;
+    grid-template-areas: "left" "right";
     background: transparent;
-    height: 100vh;
     margin-top: 45px;
-    overflow:scroll;
 }
 .image-taste {
     grid-area: left;
     
-    /* display: flex; */
     width: 100%;
     margin: 0 auto;
+    overflow: hidden;
     box-sizing: border-box;
 }
 .taste-right {
     grid-area: right;
     
     display: grid;
-    height: 500px;
+    height: 100vh;
     grid-template-rows: 1fr 2fr 2fr;
     grid-template-areas: 
     "top"
@@ -268,8 +251,9 @@ main img {
 }
 .taste-right h1 {
     grid-area: top;
-    color: var(--color-accent-2);
-    padding: 10px;
+    
+    color: var(--black);
+    padding: 5px;
     width: 80%;
     margin: 10px auto;
     text-align: center;
@@ -281,20 +265,21 @@ main img {
 }
 .taste-right img {
     grid-area: mid;
+    
+    width: 80%;
+    height: auto;
     margin: 0 auto;
 
 }
 .taste-btn {
     grid-area: bottom;
-    padding: 10px;
-
+    
     display: flex;
+    padding: 10px;
+    height: max-content;
     flex-direction: column;
     row-gap: 6px;
 }
-/* .btn-1::before {
-    content: url('../images/taste-menu-icon.png');
-} */
 .btn-1 {
     display: block;
     border-radius: 7px;
@@ -306,7 +291,7 @@ main img {
     padding-top: 10px;
     font-size: x-large;
     background-color: var(--color-accent);
-    color: #f9f9f9;
+    color: var(--black);
     text-decoration: none;
     box-sizing: border-box;
 }
@@ -325,6 +310,7 @@ body {
     background-color: var(--white);
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 html, body {
     height: 100%;
@@ -340,30 +326,6 @@ header > *, nav > *, main > *, footer > * {
   padding: 0;
   box-sizing: border-box;
 }
-/*********************** Dynamic header, nav & footer ******************************/
-/* .taste-header {
-    background: transparent;
-    color: var(--black);
-    
-}
-.taste-header h3, .taste-header img {
-    display: inline-block;
-}
-.taste-footer {
-    background-color: hsla(94, 100%, 22%, 0.9); /* semi-transparent black */
-/*}
-.taste-nav {
-    background: transparent;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-.taste-nav.fixed {
-    background: rgba(255,255,255,0.95);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-} */
 /*********************** Note: Style Testing ******************************/
 main h2 {
   margin-bottom: 15px;
@@ -389,7 +351,8 @@ blockquote {
 .contacts {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  min-width: 100px;
+  max-width: 500px;
   margin: 0 auto;
 }
 form {
@@ -429,40 +392,10 @@ form button {
 }
 
 form button:hover {
-  background-color: #a30000;
+  background-color: #fcfcfc;
 }
-
-/*********************** Footer Styling ******************************/
-/*********************** Footer Styling ******************************/
-footer {
-    background-color: #317000;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.taste-attributes, .taste-splan {
-    text-decoration: none;
-    font-size: large;
-    color: var(--white);
-    padding: 4px;
-}
-
-.taste-attributes:hover, .taste-splan:hover {
-    background-color: var(--white);
-    color: #317000;
-    border: #317000;
-    border-radius: 5px;
-}
-
-.last-modified {
-    display: block;
-    color: #ECF0F1;
-    width: 250px;
-    margin: 0 auto;
+.card ul {
+    list-style: none;
 }
 /*********************** Action Page Styling ******************************/
 /* Services Grid */
@@ -488,7 +421,11 @@ footer {
     transform: translateY(20px);
     animation: fadeInUp 0.8s ease forwards;
 }
-
+.booking { 
+    display: flex; 
+    text-align: center;
+    padding-bottom: 150px;
+}
 /* Staggered animation delay for each card */
 .service:nth-child(1) { animation-delay: 0.1s; }
 .service:nth-child(2) { animation-delay: 0.2s; }
@@ -517,23 +454,23 @@ footer {
 }
 
 /* Example Images — replace with your own */
-.service:nth-child(1)::before { background-image: url("images/wedding.jpg"); }
-.service:nth-child(2)::before { background-image: url("images/corporate.jpg"); }
-.service:nth-child(3)::before { background-image: url("images/private.jpg"); }
-.service:nth-child(4)::before { background-image: url("images/holiday.jpg"); }
-.service:nth-child(5)::before { background-image: url("images/social.jpg"); }
-.service:nth-child(6)::before { background-image: url("images/outdoor.jpg"); }
-.service:nth-child(7)::before { background-image: url("images/festival.jpg"); }
-.service:nth-child(8)::before { background-image: url("images/funeral.jpg"); }
-.service:nth-child(9)::before { background-image: url("images/charity.jpg"); }
-.service:nth-child(10)::before { background-image: url("images/dietary.jpg"); }
+.service:nth-child(1)::before { background-image: url("../images/wedding-180x180.webp"); }
+.service:nth-child(2)::before { background-image: url("../images/corporate-180x180.webp"); }
+.service:nth-child(3)::before { background-image: url("../images/private-180x180.webp"); }
+.service:nth-child(4)::before { background-image: url("../images/holiday-180x180.webp"); }
+.service:nth-child(5)::before { background-image: url("../images/social-180x180.webp"); }
+.service:nth-child(6)::before { background-image: url("../images/outdoor-180x180.webp"); }
+.service:nth-child(7)::before { background-image: url("../images/festival-180x180.webp"); }
+.service:nth-child(8)::before { background-image: url("../images/funeral-180x180.webp"); }
+.service:nth-child(9)::before { background-image: url("../images/charity-180x180.webp"); }
+.service:nth-child(10)::before { background-image: url("../images/dietary-180x180.webp"); }
 
 /* Text Content */
 .service h2 {
     font-size: 1.25rem;
     padding: 1rem 1rem 0.5rem;
 }
-
+.service h2, .h2-serv, .contacts h2, .submit, .attrib h2 { color: var(--black); }
 .service p {
     padding: 0 1rem 1.5rem;
     color: #666;
@@ -550,37 +487,10 @@ footer {
     }
 }
 .main-welcome {
-    background-color:hsla(28, 80%, 52%, 0.72) ;
+    background-color:hsla(28, 80%, 52%, 0.72);
+    height: 70vh;
+    color: var(--black);
 }
-.welcome {
-    list-style: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 40vmin;
-    height: 40vmin;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
-    color: #000000;
-    padding: 10px;
-    justify-content:center ;
-    background-color:var(--color-accent) ;
-    /* box-sizing: border-box; */
-    border-radius: 7px;
-    display: flex;
-    flex-direction: column;
-
-}
-/* .submit {
-    width: 30vmin;   /* 30% of the smaller viewport side */
-  /*height: 30vmin;   ensures it's always a square 
-  background: lightcoral;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  
-} */
 .attribute-main {
     width: 50%;
     margin: 50px auto;
@@ -609,8 +519,8 @@ footer {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    color: var(--color-accent-2);
-    background-color: #e67d226f;
+    color: #317000;
+    background-color: var(--white);
     border-radius: 7px;
 }
 
@@ -631,8 +541,50 @@ footer {
     font-weight: bold;
     padding: 3px;
     margin: 0px;
+    color: var(--black);
 }
 /*********************** Modal Styling ******************************/
 .menu-modal {
     width: 300px;
+}
+
+/*********************** Footer Styling ******************************/
+/*********************** Footer Styling ******************************/
+footer {
+    background-color: #317000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.taste-attributes, .taste-splan {
+    text-decoration: none;
+    font-size: large;
+    color: var(--white);
+    padding: 4px;
+}
+
+.taste-attributes:hover, .taste-splan:hover {
+    background-color: var(--white);
+    color: #317000;
+    border: #317000;
+    border-radius: 5px;
+}
+
+.last-modified {
+    display: block;
+    color: #ECF0F1;
+    width: 300px;
+    margin: 0 auto;
+}
+.social-links a {
+    width: 55px;
+    height: auto;
+}
+.social-links {
+    margin-top: 5px;
 }

@@ -12,7 +12,6 @@
     <meta property="og:description" content="TasteBuds Catering Services is a premier catering service specializing in African cuisine, offering a wide range of services including event catering, menu planning, and personalized culinary experiences.">
     <meta property="og:image" content="./images/chef-logo-silhouette.avif">
     <meta property="og:url" content="https://dommmy200.github.io/wdd231/">
-    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+Pro:wght@300;600&family=Comfortaa:wght@400;700&family=Bad+Script:wght@400;700&display=swap"/>
     <link rel="icon" href="../final/images/favicon-16x16.png" type="image/x-icon" sizes="16x16 32x32 48x48" id="favicon">
     <link rel="stylesheet" href="./styles/small.css">
     <link rel="stylesheet" href="./styles/normalize.css">
@@ -22,24 +21,32 @@
 </head>
 <body class="body">
     <header class="taste-header">
-        <img src="./images/chef-logo-silhouette.avif" alt="African TasteBuds Catering Services Logo" width="50" height="50" loading="lazy">
-        <h3>African TasteBuds Catering Services</h3>
-        <button id="ham-btn" class="hamburger" type="button" aria-label="Show or hide menu"></button>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./images/chef-logo-silhouette.avif" alt="African TasteBuds Catering Services Logo" width="50" height="50" loading="lazy">
+                <h3>African TasteBuds Catering</h3>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+                ☰
+            </button>
+
+            <!-- Nav Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./menus.html">Menus</a></li>
+                <li><a href="./contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav class="taste-nav">
-        <ul class="taste-ul">
-            <li><a href="./services.html">Services</a></li>
-            <li><a href="./menus.html">Menus</a></li>
-            <li><a href="./contacts.html">Contacts</a></li>
-        </ul>
-    </nav>
     <main class="taste-main">
         <div class="image-taste">
-            <img class="taste-hero-image" src="../final/images/taste-hero-image.jpg" alt="Hero image for TasteBuds Catering Services" loading="lazy">         
+            <img class="taste-hero-image" src="../final/images/taste-hero-image.webp" alt="Hero image for TasteBuds Catering Services" width="1000" height="667" loading="lazy">         
         </div>
         <div class="taste-right">
-            <h1><strong>African TasteBuds Catering Services</strong></h1>
-            <img src="./images/taste-buds-img.webp" alt="">
+            <h1><strong>African TasteBuds Catering</strong></h1>
+            <img src="./images/chef-logo-image-200x200.webp" alt="CTA image" width="200" height="200" loading="lazy">
             <div id="taste-btn" class="taste-btn">
                 <a href="./services.html" id="btn-1" class="btn-1">Services</a>
                 <a href="./menus.html" id="btn-2" class="btn-1">Menu</a>
@@ -51,6 +58,25 @@
         <p>&copy; 2025 Abah Dominic<span id="last-modified" class="last-modified"></span><span id="visit" class="visit"></span></p>
         <a href="./attributes.html" class="taste-attributes">Attributes</a>
         <a href="./project-siteplan.html" class="taste-splan">Site Plan</a>
+        <div class="index social-links">
+            <a href="https://github.com/dommmy200?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M29 17c-6.6 0-12 5.4-12 12v42c0 6.6 5.4 12 12 12h42c6.6 0 12-5.4 12-12V29c0-6.6-5.4-12-12-12H29zm0 2h42c5.5 0 10 4.5 10 10v42c0 5.5-4.5 10-10 10H29c-5.5 0-10-4.5-10-10V29c0-5.5 4.5-10 10-10zm5.5 4C28.2 23 23 28.2 23 34.5v31C23 71.8 28.2 77 34.5 77H66c5.8 0 10.5-4.7 10.5-10.5v-15c0-.3-.2-.5-.5-.5s-.5.2-.5.5v15c0 5.8-4.7 10.5-10.5 10.5h-6v-8.3c0-2.2-1.1-4.2-2.8-5.5H57.4c6.8 0 12.5-5.5 12.5-12.2 0-3.2-1.2-6.3-3.4-8.7.3-1.9.3-4.7-.6-7.4 0-.2-.2-.3-.4-.3-4.1 0-7.5 2.7-8.9 4H44.7c-3.5-3.3-6.6-4-8.7-4-.2 0-.4.1-.5.3-.8 2.3-1.1 5.1-1 7.3-2.6 2.3-4 5.5-4 9 0 6.7 5.7 12.2 12.4 12.2h.7c-1.2 1-2.1 2.4-2.4 4-.9 0-2.4-.2-3.2-1.3-2.4-3.6-3.2-3.6-4.3-3.6-.7 0-1.2.3-1.4.8-.3.8.1 1.8 1 2.6 1.1 1.2 1.1 1.2 2.3 3.5.8 1.4 2.7 3.8 8.5 3.9V76h-7c-5.8 0-10.5-4.7-10.5-10.5v-31C24 28.7 28.7 24 34.5 24H65.5c.3 0 .5-.2.5-.5s-.2-.5-.5-.5H34.5z" fill="white"></path> </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/dominic-abah-0a776a69" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+                    <path
+                        d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z" fill="white"/>
+                </svg>
+            </a>
+            <a href="https://youtu.be/dnJU_wnCEE0?si=Z1aaunR4eMpJISab" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="50" height="50" aria-hidden="true">
+                    <path
+                        d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6C14.9 167 14.9 256.4 14.9 256.4s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2-142.7 81.2z" fill="white"/>
+                </svg>
+            </a>
+        </div>
     </footer>
 </body>
 </html>

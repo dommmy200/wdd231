@@ -45,9 +45,24 @@
     line-height: var(--line-height-body);
     color: var(--color-primary);
 }
-/*********************** Header Styling ******************************/
-/*********************** Hamburger Styling ******************************/
+/*********************** Global reset ******************************/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
 
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+/*********************** Hamburger Styling ******************************/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -309,17 +324,6 @@ body {
     overflow-x: hidden;
     min-height: 100vh; /* 100% of the viewport height */
 }
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-header > *, nav > *, main > *, footer > * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 /*********************** Note: Style Testing ******************************/
 main h2 {
   margin-bottom: 15px;
@@ -352,7 +356,6 @@ blockquote {
 form {
     display: flex;
     flex-direction: column;
-    /* width: 50%; */
     margin: 0 auto;
     color: #000000;
     border: var(--color-accent-2) solid 1px;
@@ -363,9 +366,6 @@ form {
     display: grid;
     grid-template-columns: 1fr;
     width: 230px;
-}
-form label {
-    color: #000000;
 }
 form input,
 form textarea,
@@ -464,7 +464,7 @@ form button:hover {
     font-size: 1.25rem;
     padding: 1rem 1rem 0.5rem;
 }
-.service h2, .h2-serv, .contacts h2, .submit, .attrib h2 { color: var(--black); }
+.service h2, .h2-serv, .contacts h2, .submit, .attrib h2, form label { color: var(--black); }
 .service p {
     padding: 0 1rem 1.5rem;
     color: #666;
@@ -542,7 +542,6 @@ form button:hover {
     width: 300px;
 }
 
-/*********************** Footer Styling ******************************/
 /*********************** Footer Styling ******************************/
 footer {
     background-color: #317000;
